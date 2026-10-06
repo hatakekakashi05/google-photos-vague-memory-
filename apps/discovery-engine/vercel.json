@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "google-photos-discovery-engine",
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" },
+    { "src": "public/**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/discovery", "dest": "/api/discovery.js" },
+    { "src": "/api/gemini-analyze", "dest": "/api/gemini-analyze.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ]
+}

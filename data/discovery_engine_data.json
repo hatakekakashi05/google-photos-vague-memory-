@@ -1,0 +1,90 @@
+{
+  "tool_metadata": {
+    "tool_name": "AI-Powered Discovery Engine (UI #1)",
+    "tool_role": "Internal Evidence Analysis & Problem Discovery Tool",
+    "target_problem": "CFM-01 (Vague-Memory Retrieval Failure at Stage G1)",
+    "total_public_records": 41,
+    "user_failure_population_count": 34,
+    "counter_evidence_count": 2,
+    "framing_records_count": 5,
+    "governance_label": "Public-Evidence-Based PM Analysis — Not a Representative User Sample",
+    "narrative": "Public Evidence → Discovery Engine → Failure Mode → Root Cause → Solution → MVP → Synthetic Benchmark → Experimentation"
+  },
+  "stage_breakdown": [
+    {
+      "stage_id": "STAGE_G1",
+      "stage_name": "Stage G1: Query Formulation & Initial Search Surfacing",
+      "failure_count": 23,
+      "percentage": 67.6,
+      "description": "Vague prompt enters search, but un-tagged target media fails to surface in initial Top-K results.",
+      "severity": "CRITICAL"
+    },
+    {
+      "stage_id": "STAGE_G2",
+      "stage_name": "Stage G2: Candidate Result Browsing & Inspection",
+      "failure_count": 7,
+      "percentage": 20.6,
+      "description": "Candidate search returns partial matches, but session is abandoned due to lack of contextual timeline navigation affordance.",
+      "severity": "MAJOR"
+    },
+    {
+      "stage_id": "STAGE_G3",
+      "stage_name": "Stage G3: Timeline Navigation & Context Expansion",
+      "failure_count": 4,
+      "percentage": 11.8,
+      "description": "User attempts manual date scrolling in main gallery timeline, losing anchor position or encountering missing EXIF metadata.",
+      "severity": "MODERATE"
+    }
+  ],
+  "evidence_records": [
+    {
+      "record_id": "EVID_001",
+      "user_persona": "Vacation Memories Searcher",
+      "vague_query_prompt": "Goa beach trip with friends sunset",
+      "target_photo_description": "Beachfront shack dinner receipt and cocktail toast",
+      "failure_stage": "STAGE_G1",
+      "primary_root_cause": "Target photo lacks 'Goa' tag; search engine fails to surface target directly in initial results."
+    },
+    {
+      "record_id": "EVID_002",
+      "user_persona": "Outdoor Enthusiast",
+      "vague_query_prompt": "Yosemite hiking trip mist trail",
+      "target_photo_description": "Hot soup dinner photo at mountain cabin",
+      "failure_stage": "STAGE_G1",
+      "primary_root_cause": "Cabin dinner photo lacks GPS EXIF; keyword search fails to correlate hike with evening meal."
+    },
+    {
+      "record_id": "EVID_003",
+      "user_persona": "Family Historian",
+      "vague_query_prompt": "Scanned vintage photo family reunion",
+      "target_photo_description": "Grandparents wedding album scanned physical print",
+      "failure_stage": "STAGE_G3",
+      "primary_root_cause": "Scanned photo has creation timestamp set to scan date (2024), stripping historical 1985 EXIF data."
+    },
+    {
+      "record_id": "EVID_004",
+      "user_persona": "Workplace Document Finder",
+      "vague_query_prompt": "Receipt office document work desk",
+      "target_photo_description": "Expense receipt print lying on office desk",
+      "failure_stage": "STAGE_G1",
+      "primary_root_cause": "No anchor landmark photo present; isolated desk photo lacks spatial/temporal clustering."
+    },
+    {
+      "record_id": "EVID_005",
+      "user_persona": "Social Event Host",
+      "vague_query_prompt": "Birthday party cake candles evening",
+      "target_photo_description": "Group photo blowing candles at evening birthday dinner",
+      "failure_stage": "STAGE_G2",
+      "primary_root_cause": "Competing morning conference event at same city location causes context window overlap."
+    }
+  ],
+  "metric_decomposition": {
+    "primary_metric": "User VMRSR (User Vague-Memory Retrieval Success Rate)",
+    "formula": "User VMRSR = (Unique active users with ≥1 vague search AND ≥1 operational retrieval success) / (Unique active users with ≥1 vague search)",
+    "sub_metrics": [
+      { "name": "Candidate Anchor Discovery Rate (ADR)", "target": "≥ 60.0%" },
+      { "name": "Target Context Reachability Rate", "target": "≥ 50.0%" },
+      { "name": "Edge-Case Handling Pass Rate", "target": "100.0%" }
+    ]
+  }
+}

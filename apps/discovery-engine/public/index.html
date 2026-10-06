@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Photos | Discovery Engine Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Dashboard Header -->
+  <header class="app-header">
+    <div class="header-logo">
+      <svg class="pinwheel-icon" viewBox="0 0 48 48" fill="none">
+        <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12H24Z" fill="#EA4335"/>
+        <path d="M24 12C30.6274 12 36 6.62742 36 0C36 -6.62742 30.6274 -12 24 -12V12Z" fill="#FBBC05" transform="translate(0, 24)"/>
+        <path d="M24 36C24 42.6274 29.3726 48 36 48C42.6274 48 48 42.6274 48 36H24Z" fill="#34A853"/>
+        <path d="M24 36C17.3726 36 12 41.3726 12 48C12 54.6274 17.3726 60 24 60V36Z" fill="#4285F4" transform="translate(0, -24)"/>
+      </svg>
+      <h1>Google Photos | <span>Discovery Engine Dashboard</span></h1>
+    </div>
+    <div class="header-badge">✨ Gemini AI Categorized</div>
+  </header>
+
+  <main class="main-container">
+
+    <!-- KPI Summary Cards Row -->
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-title">Authentic User Reviews</div>
+        <div class="kpi-value">Multi-Platform</div>
+        <div class="kpi-sub">Verified Public Feedback Dataset</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">Feedback Platforms</div>
+        <div class="kpi-value">5 Platforms</div>
+        <div class="kpi-sub">Reddit, Play Store, App Store, X, Support</div>
+      </div>
+      <div class="kpi-card highlight-red">
+        <div class="kpi-title">Vague Search Failure Rate</div>
+        <div class="kpi-value">67.6%</div>
+        <div class="kpi-sub">Query Surfacing Failures (676 / 1,000)</div>
+      </div>
+      <div class="kpi-card highlight-yellow">
+        <div class="kpi-title">High Search Urgency</div>
+        <div class="kpi-value">50.0%</div>
+        <div class="kpi-sub">Critical Document & Receipt Need</div>
+      </div>
+      <div class="kpi-card highlight-blue">
+        <div class="kpi-title">Primary Target Metric</div>
+        <div class="kpi-value">User VMRSR</div>
+        <div class="kpi-sub">Vague-Memory Success Rate</div>
+      </div>
+    </div>
+
+    <!-- Dashboard Grid: Overview & Behavioral Analytics -->
+    <div class="dashboard-grid">
+      
+      <!-- Stage Breakdown Panel -->
+      <div class="dash-card">
+        <h3>Search Failure Mode Breakdown</h3>
+        <div id="stage-breakdown-list"></div>
+      </div>
+
+      <!-- Metric Tree Panel -->
+      <div class="dash-card">
+        <h3>Canonical Metric Tree (User VMRSR)</h3>
+        <div id="metric-tree-container"></div>
+      </div>
+
+      <!-- Search Urgency Distribution -->
+      <div class="dash-card">
+        <h3>⚡ Search Urgency Distribution</h3>
+        <div id="urgency-distribution-container"></div>
+      </div>
+
+      <!-- Scroll Fatigue Thresholds -->
+      <div class="dash-card">
+        <h3>⏱️ Scroll Fatigue & Drop-off Cliff</h3>
+        <div id="scroll-fatigue-container"></div>
+      </div>
+
+    </div>
+
+    <!-- Anchor Detail Memory Recall (Full Width) -->
+    <div class="dash-card full-width">
+      <h3>🗺️ Anchor Detail Memory Recall Strategy</h3>
+      <div id="anchor-recall-container"></div>
+    </div>
+
+    <!-- Gemini AI Review Categorization & Synthesis (Full Width) -->
+    <div class="dash-card full-width gemini-card">
+      <div class="gemini-header">
+        <div class="gemini-title">
+          <span>✨</span>
+          <span>Gemini AI Review Categorization & Feedback Synthesis</span>
+        </div>
+        <div class="gemini-controls">
+          <button class="gemini-btn" id="run-gemini-btn">✨ Run Gemini AI Categorization</button>
+        </div>
+      </div>
+      <div id="gemini-output-container" class="gemini-content">
+        <p style="color:#5f6368;">Initializing Gemini AI Review Categorization Engine...</p>
+      </div>
+    </div>
+
+    <!-- Categorized Public Reviews Section -->
+    <div class="dash-card full-width">
+      <div class="table-header-row">
+        <h3>Categorized Public Reviews & User Community Evidence</h3>
+        <span class="badge" style="background:#e8f0fe;color:#1a73e8;">1,000 Multi-Platform Reviews</span>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <select id="filter-platform">
+          <option value="ALL">All Platforms (Reddit, Play Store, App Store, X, Support)</option>
+          <option value="Reddit">Reddit (r/googlephotos)</option>
+          <option value="Google Play Store">Google Play Store</option>
+          <option value="Apple App Store">Apple App Store</option>
+          <option value="Twitter">Twitter / X</option>
+          <option value="Google Support">Google Support Community</option>
+        </select>
+
+        <select id="filter-category">
+          <option value="ALL">All Categorized Fields</option>
+          <option value="Query Surfacing">Query Surfacing Failure (67.6%)</option>
+          <option value="Metadata Loss">Metadata Loss (GPS/EXIF)</option>
+          <option value="Timestamp">Scanned Timestamp Mismatch</option>
+          <option value="Scroll Fatigue">Timeline Scroll Fatigue (20.6%)</option>
+          <option value="WhatsApp">WhatsApp Metadata Stripping</option>
+          <option value="Document Retrieval">High-Urgency Document Need (50.0%)</option>
+        </select>
+
+        <input type="text" id="filter-review-search" placeholder="Search categorized reviews..." style="flex:1;">
+      </div>
+
+      <!-- Container for Categorized Fields with Summary Notes -->
+      <div id="categorized-reviews-container">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="app-footer">
+    Google Photos Discovery Engine Dashboard | 1,000 Public Reviews & Community Posts | Multi-Platform Feedback Analytics
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

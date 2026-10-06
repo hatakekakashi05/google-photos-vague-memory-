@@ -1,0 +1,1240 @@
+{
+  "total_responses": 34,
+  "survey_name": "Google Photos Vague-Memory Search & Urgency Behavioral Survey",
+  "survey_description": "15-question primary research survey investigating vague memory search behavior, search urgency triggers, scroll fatigue thresholds, and anchor memory recall patterns.",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "1. What is your age group?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q2",
+      "text": "2. Which city do you live in?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q3",
+      "text": "3. What is your current occupation?",
+      "type": "short_text"
+    },
+    {
+      "id": "q4",
+      "text": "4. Roughly how many photos and videos are in your gallery?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q5",
+      "text": "5. How often do you search for old or specific photos?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q6",
+      "text": "6. When searching for a vague memory, what is your primary urgency?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q7",
+      "text": "7. When searching for a blurry memory, what is your VERY FIRST action?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q8",
+      "text": "8. Think of a recent search: What exact vague words did you type into the search bar?",
+      "type": "paragraph"
+    },
+    {
+      "id": "q9",
+      "text": "9. What actual photo or document were you trying to retrieve?",
+      "type": "paragraph"
+    },
+    {
+      "id": "q10",
+      "text": "10. If your first search fails, what do you try next?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q11",
+      "text": "11. When your vague memory is unclear, what surrounding detail do you remember best?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q12",
+      "text": "12. How long do you scroll or modify searches before completely giving up?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q13",
+      "text": "13. What happened when you attempted that search?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q14",
+      "text": "14. In your opinion, why was the target photo impossible to find?",
+      "type": "multiple_choice"
+    },
+    {
+      "id": "q15",
+      "text": "15. Would tapping a known landmark photo to jump to a 4-hour time window help?",
+      "type": "multiple_choice"
+    }
+  ],
+  "responses": [
+    {
+      "response_id": "SURVEY_RESP_001",
+      "submission_timestamp": "2026-09-20T05:46:39.124Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Delhi NCR",
+        "occupation": "Consultant",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Delhi NCR",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Goa beach trip sunset with friends (Sample #1)",
+        "q9_target_media_description": "Beachfront shack dinner receipt and cocktail toast photo",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "The photo didn't have any obvious tags or text matching my search words",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Un-tagged Target Photo (Search engine failed to match vague keywords with un-tagged photo)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Delhi NCR"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_002",
+      "submission_timestamp": "2026-09-20T17:46:39.135Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Bangalore",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Bangalore",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Yosemite hiking trip mist trail mountains (Sample #2)",
+        "q9_target_media_description": "Hot soup dinner at mountain cabin in the evening",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "Location wasn't saved on the photo",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Missing GPS EXIF (Photo lacked location coordinates)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Bangalore"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_003",
+      "submission_timestamp": "2026-09-21T05:46:39.135Z",
+      "demographics": {
+        "age_group": "45-54",
+        "city": "Mumbai",
+        "occupation": "Business Owner",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "45-54",
+        "q2_city": "Mumbai",
+        "q3_occupation": "Business Owner",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "Moderate Urgency (Trying to settle a memory debate or show a photo to friends nearby)",
+        "q7_first_search_action": "Scroll back manually through the main timeline gallery",
+        "q8_vague_search_prompt": "Scanned vintage photo family reunion grandparents (Sample #3)",
+        "q9_target_media_description": "Grandparents 1985 wedding album physical print scan",
+        "q10_retry_behavior": "Switch from search bar to manual timeline scrolling",
+        "q11_anchor_memory_detail": "A distinct object, meal, or clothing item from an adjacent photo",
+        "q12_scroll_fatigue_threshold": "Less than 1 minute (Abandon quickly if not in Top-K results)",
+        "q13_what_happened": "I tried scrolling back manually through my timeline/calendar, but got lost or gave up",
+        "q14_why_hard_to_find": "It was a scanned or old photo with the wrong date/timestamp",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G3: Timeline Navigation & Context Expansion Failure",
+        "root_cause": "Missing Timestamp EXIF (Scanned or historical photo lacked date metadata)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Business Owner in Mumbai"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_004",
+      "submission_timestamp": "2026-09-21T17:46:39.135Z",
+      "demographics": {
+        "age_group": "18-24",
+        "city": "Hyderabad",
+        "occupation": "Software Engineer",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "18-24",
+        "q2_city": "Hyderabad",
+        "q3_occupation": "Software Engineer",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "Low Urgency (Casual nostalgic browsing / looking back at old vacation memories)",
+        "q7_first_search_action": "Filter by People/Faces or Location tab",
+        "q8_vague_search_prompt": "Receipt or office document lying on work desk (Sample #4)",
+        "q9_target_media_description": "Expense receipt paper document on office table",
+        "q10_retry_behavior": "Give up immediately and stop searching",
+        "q11_anchor_memory_detail": "Nothing specific — only a general feeling/time of year",
+        "q12_scroll_fatigue_threshold": "More than 5 minutes (Scroll until frustrated)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "I couldn't remember key details or landmark photos around that time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Sparse Context (No anchor landmark photo in 4-hour window)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Software Engineer in Hyderabad"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_005",
+      "submission_timestamp": "2026-09-22T05:46:39.135Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Pune",
+        "occupation": "Consultant",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Pune",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Birthday party cake candles evening celebration (Sample #5)",
+        "q9_target_media_description": "Group photo blowing cake candles at evening dinner",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "I got some results, but I gave up scrolling through them without finding it",
+        "q14_why_hard_to_find": "I had too many photos from different events around that same time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G2: Candidate Browsing & Inspection Failure",
+        "root_cause": "Multi-Event Overlap (Competing event at same location caused context window collision)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Pune"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_006",
+      "submission_timestamp": "2026-09-22T17:46:39.135Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Delhi NCR",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Delhi NCR",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Goa beach trip sunset with friends (Sample #6)",
+        "q9_target_media_description": "Beachfront shack dinner receipt and cocktail toast photo",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "The photo didn't have any obvious tags or text matching my search words",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Un-tagged Target Photo (Search engine failed to match vague keywords with un-tagged photo)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Delhi NCR"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_007",
+      "submission_timestamp": "2026-09-23T05:46:39.135Z",
+      "demographics": {
+        "age_group": "45-54",
+        "city": "Bangalore",
+        "occupation": "Business Owner",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "45-54",
+        "q2_city": "Bangalore",
+        "q3_occupation": "Business Owner",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "Moderate Urgency (Trying to settle a memory debate or show a photo to friends nearby)",
+        "q7_first_search_action": "Scroll back manually through the main timeline gallery",
+        "q8_vague_search_prompt": "Yosemite hiking trip mist trail mountains (Sample #7)",
+        "q9_target_media_description": "Hot soup dinner at mountain cabin in the evening",
+        "q10_retry_behavior": "Switch from search bar to manual timeline scrolling",
+        "q11_anchor_memory_detail": "A distinct object, meal, or clothing item from an adjacent photo",
+        "q12_scroll_fatigue_threshold": "Less than 1 minute (Abandon quickly if not in Top-K results)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "Location wasn't saved on the photo",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Missing GPS EXIF (Photo lacked location coordinates)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Business Owner in Bangalore"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_008",
+      "submission_timestamp": "2026-09-23T17:46:39.135Z",
+      "demographics": {
+        "age_group": "18-24",
+        "city": "Mumbai",
+        "occupation": "Software Engineer",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "18-24",
+        "q2_city": "Mumbai",
+        "q3_occupation": "Software Engineer",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "Low Urgency (Casual nostalgic browsing / looking back at old vacation memories)",
+        "q7_first_search_action": "Filter by People/Faces or Location tab",
+        "q8_vague_search_prompt": "Scanned vintage photo family reunion grandparents (Sample #8)",
+        "q9_target_media_description": "Grandparents 1985 wedding album physical print scan",
+        "q10_retry_behavior": "Give up immediately and stop searching",
+        "q11_anchor_memory_detail": "Nothing specific — only a general feeling/time of year",
+        "q12_scroll_fatigue_threshold": "More than 5 minutes (Scroll until frustrated)",
+        "q13_what_happened": "I tried scrolling back manually through my timeline/calendar, but got lost or gave up",
+        "q14_why_hard_to_find": "It was a scanned or old photo with the wrong date/timestamp",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G3: Timeline Navigation & Context Expansion Failure",
+        "root_cause": "Missing Timestamp EXIF (Scanned or historical photo lacked date metadata)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Software Engineer in Mumbai"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_009",
+      "submission_timestamp": "2026-09-24T05:46:39.135Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Hyderabad",
+        "occupation": "Consultant",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Hyderabad",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Receipt or office document lying on work desk (Sample #9)",
+        "q9_target_media_description": "Expense receipt paper document on office table",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "I couldn't remember key details or landmark photos around that time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Sparse Context (No anchor landmark photo in 4-hour window)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Hyderabad"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_010",
+      "submission_timestamp": "2026-09-24T17:46:39.135Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Pune",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Pune",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Birthday party cake candles evening celebration (Sample #10)",
+        "q9_target_media_description": "Group photo blowing cake candles at evening dinner",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "I got some results, but I gave up scrolling through them without finding it",
+        "q14_why_hard_to_find": "I had too many photos from different events around that same time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G2: Candidate Browsing & Inspection Failure",
+        "root_cause": "Multi-Event Overlap (Competing event at same location caused context window collision)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Pune"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_011",
+      "submission_timestamp": "2026-09-25T05:46:39.135Z",
+      "demographics": {
+        "age_group": "45-54",
+        "city": "Delhi NCR",
+        "occupation": "Business Owner",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "45-54",
+        "q2_city": "Delhi NCR",
+        "q3_occupation": "Business Owner",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "Moderate Urgency (Trying to settle a memory debate or show a photo to friends nearby)",
+        "q7_first_search_action": "Scroll back manually through the main timeline gallery",
+        "q8_vague_search_prompt": "Goa beach trip sunset with friends (Sample #11)",
+        "q9_target_media_description": "Beachfront shack dinner receipt and cocktail toast photo",
+        "q10_retry_behavior": "Switch from search bar to manual timeline scrolling",
+        "q11_anchor_memory_detail": "A distinct object, meal, or clothing item from an adjacent photo",
+        "q12_scroll_fatigue_threshold": "Less than 1 minute (Abandon quickly if not in Top-K results)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "The photo didn't have any obvious tags or text matching my search words",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Un-tagged Target Photo (Search engine failed to match vague keywords with un-tagged photo)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Business Owner in Delhi NCR"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_012",
+      "submission_timestamp": "2026-09-25T17:46:39.136Z",
+      "demographics": {
+        "age_group": "18-24",
+        "city": "Bangalore",
+        "occupation": "Software Engineer",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "18-24",
+        "q2_city": "Bangalore",
+        "q3_occupation": "Software Engineer",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "Low Urgency (Casual nostalgic browsing / looking back at old vacation memories)",
+        "q7_first_search_action": "Filter by People/Faces or Location tab",
+        "q8_vague_search_prompt": "Yosemite hiking trip mist trail mountains (Sample #12)",
+        "q9_target_media_description": "Hot soup dinner at mountain cabin in the evening",
+        "q10_retry_behavior": "Give up immediately and stop searching",
+        "q11_anchor_memory_detail": "Nothing specific — only a general feeling/time of year",
+        "q12_scroll_fatigue_threshold": "More than 5 minutes (Scroll until frustrated)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "Location wasn't saved on the photo",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Missing GPS EXIF (Photo lacked location coordinates)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Software Engineer in Bangalore"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_013",
+      "submission_timestamp": "2026-09-26T05:46:39.136Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Mumbai",
+        "occupation": "Consultant",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Mumbai",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Scanned vintage photo family reunion grandparents (Sample #13)",
+        "q9_target_media_description": "Grandparents 1985 wedding album physical print scan",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "I tried scrolling back manually through my timeline/calendar, but got lost or gave up",
+        "q14_why_hard_to_find": "It was a scanned or old photo with the wrong date/timestamp",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G3: Timeline Navigation & Context Expansion Failure",
+        "root_cause": "Missing Timestamp EXIF (Scanned or historical photo lacked date metadata)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Mumbai"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_014",
+      "submission_timestamp": "2026-09-26T17:46:39.136Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Hyderabad",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Hyderabad",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Receipt or office document lying on work desk (Sample #14)",
+        "q9_target_media_description": "Expense receipt paper document on office table",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "I couldn't remember key details or landmark photos around that time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Sparse Context (No anchor landmark photo in 4-hour window)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Hyderabad"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_015",
+      "submission_timestamp": "2026-09-27T05:46:39.136Z",
+      "demographics": {
+        "age_group": "45-54",
+        "city": "Pune",
+        "occupation": "Business Owner",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "45-54",
+        "q2_city": "Pune",
+        "q3_occupation": "Business Owner",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "Moderate Urgency (Trying to settle a memory debate or show a photo to friends nearby)",
+        "q7_first_search_action": "Scroll back manually through the main timeline gallery",
+        "q8_vague_search_prompt": "Birthday party cake candles evening celebration (Sample #15)",
+        "q9_target_media_description": "Group photo blowing cake candles at evening dinner",
+        "q10_retry_behavior": "Switch from search bar to manual timeline scrolling",
+        "q11_anchor_memory_detail": "A distinct object, meal, or clothing item from an adjacent photo",
+        "q12_scroll_fatigue_threshold": "Less than 1 minute (Abandon quickly if not in Top-K results)",
+        "q13_what_happened": "I got some results, but I gave up scrolling through them without finding it",
+        "q14_why_hard_to_find": "I had too many photos from different events around that same time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G2: Candidate Browsing & Inspection Failure",
+        "root_cause": "Multi-Event Overlap (Competing event at same location caused context window collision)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Business Owner in Pune"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_016",
+      "submission_timestamp": "2026-09-27T17:46:39.136Z",
+      "demographics": {
+        "age_group": "18-24",
+        "city": "Delhi NCR",
+        "occupation": "Software Engineer",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "18-24",
+        "q2_city": "Delhi NCR",
+        "q3_occupation": "Software Engineer",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "Low Urgency (Casual nostalgic browsing / looking back at old vacation memories)",
+        "q7_first_search_action": "Filter by People/Faces or Location tab",
+        "q8_vague_search_prompt": "Goa beach trip sunset with friends (Sample #16)",
+        "q9_target_media_description": "Beachfront shack dinner receipt and cocktail toast photo",
+        "q10_retry_behavior": "Give up immediately and stop searching",
+        "q11_anchor_memory_detail": "Nothing specific — only a general feeling/time of year",
+        "q12_scroll_fatigue_threshold": "More than 5 minutes (Scroll until frustrated)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "The photo didn't have any obvious tags or text matching my search words",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Un-tagged Target Photo (Search engine failed to match vague keywords with un-tagged photo)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Software Engineer in Delhi NCR"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_017",
+      "submission_timestamp": "2026-09-28T05:46:39.136Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Bangalore",
+        "occupation": "Consultant",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Bangalore",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Yosemite hiking trip mist trail mountains (Sample #17)",
+        "q9_target_media_description": "Hot soup dinner at mountain cabin in the evening",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "Location wasn't saved on the photo",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Missing GPS EXIF (Photo lacked location coordinates)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Bangalore"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_018",
+      "submission_timestamp": "2026-09-28T17:46:39.136Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Mumbai",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Mumbai",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Scanned vintage photo family reunion grandparents (Sample #18)",
+        "q9_target_media_description": "Grandparents 1985 wedding album physical print scan",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "I tried scrolling back manually through my timeline/calendar, but got lost or gave up",
+        "q14_why_hard_to_find": "It was a scanned or old photo with the wrong date/timestamp",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G3: Timeline Navigation & Context Expansion Failure",
+        "root_cause": "Missing Timestamp EXIF (Scanned or historical photo lacked date metadata)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Mumbai"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_019",
+      "submission_timestamp": "2026-09-29T05:46:39.136Z",
+      "demographics": {
+        "age_group": "45-54",
+        "city": "Hyderabad",
+        "occupation": "Business Owner",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "45-54",
+        "q2_city": "Hyderabad",
+        "q3_occupation": "Business Owner",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "Moderate Urgency (Trying to settle a memory debate or show a photo to friends nearby)",
+        "q7_first_search_action": "Scroll back manually through the main timeline gallery",
+        "q8_vague_search_prompt": "Receipt or office document lying on work desk (Sample #19)",
+        "q9_target_media_description": "Expense receipt paper document on office table",
+        "q10_retry_behavior": "Switch from search bar to manual timeline scrolling",
+        "q11_anchor_memory_detail": "A distinct object, meal, or clothing item from an adjacent photo",
+        "q12_scroll_fatigue_threshold": "Less than 1 minute (Abandon quickly if not in Top-K results)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "I couldn't remember key details or landmark photos around that time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Sparse Context (No anchor landmark photo in 4-hour window)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Business Owner in Hyderabad"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_020",
+      "submission_timestamp": "2026-09-29T17:46:39.136Z",
+      "demographics": {
+        "age_group": "18-24",
+        "city": "Pune",
+        "occupation": "Software Engineer",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "18-24",
+        "q2_city": "Pune",
+        "q3_occupation": "Software Engineer",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "Low Urgency (Casual nostalgic browsing / looking back at old vacation memories)",
+        "q7_first_search_action": "Filter by People/Faces or Location tab",
+        "q8_vague_search_prompt": "Birthday party cake candles evening celebration (Sample #20)",
+        "q9_target_media_description": "Group photo blowing cake candles at evening dinner",
+        "q10_retry_behavior": "Give up immediately and stop searching",
+        "q11_anchor_memory_detail": "Nothing specific — only a general feeling/time of year",
+        "q12_scroll_fatigue_threshold": "More than 5 minutes (Scroll until frustrated)",
+        "q13_what_happened": "I got some results, but I gave up scrolling through them without finding it",
+        "q14_why_hard_to_find": "I had too many photos from different events around that same time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G2: Candidate Browsing & Inspection Failure",
+        "root_cause": "Multi-Event Overlap (Competing event at same location caused context window collision)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Software Engineer in Pune"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_021",
+      "submission_timestamp": "2026-09-30T05:46:39.136Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Delhi NCR",
+        "occupation": "Consultant",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Delhi NCR",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Goa beach trip sunset with friends (Sample #21)",
+        "q9_target_media_description": "Beachfront shack dinner receipt and cocktail toast photo",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "The photo didn't have any obvious tags or text matching my search words",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Un-tagged Target Photo (Search engine failed to match vague keywords with un-tagged photo)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Delhi NCR"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_022",
+      "submission_timestamp": "2026-09-30T17:46:39.136Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Bangalore",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Bangalore",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Yosemite hiking trip mist trail mountains (Sample #22)",
+        "q9_target_media_description": "Hot soup dinner at mountain cabin in the evening",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "Location wasn't saved on the photo",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Missing GPS EXIF (Photo lacked location coordinates)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Bangalore"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_023",
+      "submission_timestamp": "2026-10-01T05:46:39.136Z",
+      "demographics": {
+        "age_group": "45-54",
+        "city": "Mumbai",
+        "occupation": "Business Owner",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "45-54",
+        "q2_city": "Mumbai",
+        "q3_occupation": "Business Owner",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "Moderate Urgency (Trying to settle a memory debate or show a photo to friends nearby)",
+        "q7_first_search_action": "Scroll back manually through the main timeline gallery",
+        "q8_vague_search_prompt": "Scanned vintage photo family reunion grandparents (Sample #23)",
+        "q9_target_media_description": "Grandparents 1985 wedding album physical print scan",
+        "q10_retry_behavior": "Switch from search bar to manual timeline scrolling",
+        "q11_anchor_memory_detail": "A distinct object, meal, or clothing item from an adjacent photo",
+        "q12_scroll_fatigue_threshold": "Less than 1 minute (Abandon quickly if not in Top-K results)",
+        "q13_what_happened": "I tried scrolling back manually through my timeline/calendar, but got lost or gave up",
+        "q14_why_hard_to_find": "It was a scanned or old photo with the wrong date/timestamp",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G3: Timeline Navigation & Context Expansion Failure",
+        "root_cause": "Missing Timestamp EXIF (Scanned or historical photo lacked date metadata)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Business Owner in Mumbai"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_024",
+      "submission_timestamp": "2026-10-01T17:46:39.136Z",
+      "demographics": {
+        "age_group": "18-24",
+        "city": "Hyderabad",
+        "occupation": "Software Engineer",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "18-24",
+        "q2_city": "Hyderabad",
+        "q3_occupation": "Software Engineer",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "Low Urgency (Casual nostalgic browsing / looking back at old vacation memories)",
+        "q7_first_search_action": "Filter by People/Faces or Location tab",
+        "q8_vague_search_prompt": "Receipt or office document lying on work desk (Sample #24)",
+        "q9_target_media_description": "Expense receipt paper document on office table",
+        "q10_retry_behavior": "Give up immediately and stop searching",
+        "q11_anchor_memory_detail": "Nothing specific — only a general feeling/time of year",
+        "q12_scroll_fatigue_threshold": "More than 5 minutes (Scroll until frustrated)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "I couldn't remember key details or landmark photos around that time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Sparse Context (No anchor landmark photo in 4-hour window)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Software Engineer in Hyderabad"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_025",
+      "submission_timestamp": "2026-10-02T05:46:39.136Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Pune",
+        "occupation": "Consultant",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Pune",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Birthday party cake candles evening celebration (Sample #25)",
+        "q9_target_media_description": "Group photo blowing cake candles at evening dinner",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "I got some results, but I gave up scrolling through them without finding it",
+        "q14_why_hard_to_find": "I had too many photos from different events around that same time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G2: Candidate Browsing & Inspection Failure",
+        "root_cause": "Multi-Event Overlap (Competing event at same location caused context window collision)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Pune"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_026",
+      "submission_timestamp": "2026-10-02T17:46:39.136Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Delhi NCR",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Delhi NCR",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Goa beach trip sunset with friends (Sample #26)",
+        "q9_target_media_description": "Beachfront shack dinner receipt and cocktail toast photo",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "The photo didn't have any obvious tags or text matching my search words",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Un-tagged Target Photo (Search engine failed to match vague keywords with un-tagged photo)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Delhi NCR"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_027",
+      "submission_timestamp": "2026-10-03T05:46:39.136Z",
+      "demographics": {
+        "age_group": "45-54",
+        "city": "Bangalore",
+        "occupation": "Business Owner",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "45-54",
+        "q2_city": "Bangalore",
+        "q3_occupation": "Business Owner",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "Moderate Urgency (Trying to settle a memory debate or show a photo to friends nearby)",
+        "q7_first_search_action": "Scroll back manually through the main timeline gallery",
+        "q8_vague_search_prompt": "Yosemite hiking trip mist trail mountains (Sample #27)",
+        "q9_target_media_description": "Hot soup dinner at mountain cabin in the evening",
+        "q10_retry_behavior": "Switch from search bar to manual timeline scrolling",
+        "q11_anchor_memory_detail": "A distinct object, meal, or clothing item from an adjacent photo",
+        "q12_scroll_fatigue_threshold": "Less than 1 minute (Abandon quickly if not in Top-K results)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "Location wasn't saved on the photo",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Missing GPS EXIF (Photo lacked location coordinates)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Business Owner in Bangalore"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_028",
+      "submission_timestamp": "2026-10-03T17:46:39.136Z",
+      "demographics": {
+        "age_group": "18-24",
+        "city": "Mumbai",
+        "occupation": "Software Engineer",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "18-24",
+        "q2_city": "Mumbai",
+        "q3_occupation": "Software Engineer",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "Low Urgency (Casual nostalgic browsing / looking back at old vacation memories)",
+        "q7_first_search_action": "Filter by People/Faces or Location tab",
+        "q8_vague_search_prompt": "Scanned vintage photo family reunion grandparents (Sample #28)",
+        "q9_target_media_description": "Grandparents 1985 wedding album physical print scan",
+        "q10_retry_behavior": "Give up immediately and stop searching",
+        "q11_anchor_memory_detail": "Nothing specific — only a general feeling/time of year",
+        "q12_scroll_fatigue_threshold": "More than 5 minutes (Scroll until frustrated)",
+        "q13_what_happened": "I tried scrolling back manually through my timeline/calendar, but got lost or gave up",
+        "q14_why_hard_to_find": "It was a scanned or old photo with the wrong date/timestamp",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G3: Timeline Navigation & Context Expansion Failure",
+        "root_cause": "Missing Timestamp EXIF (Scanned or historical photo lacked date metadata)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Software Engineer in Mumbai"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_029",
+      "submission_timestamp": "2026-10-04T05:46:39.136Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Hyderabad",
+        "occupation": "Consultant",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Hyderabad",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Receipt or office document lying on work desk (Sample #29)",
+        "q9_target_media_description": "Expense receipt paper document on office table",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "I couldn't remember key details or landmark photos around that time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Sparse Context (No anchor landmark photo in 4-hour window)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Hyderabad"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_030",
+      "submission_timestamp": "2026-10-04T17:46:39.136Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Pune",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Pune",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Birthday party cake candles evening celebration (Sample #30)",
+        "q9_target_media_description": "Group photo blowing cake candles at evening dinner",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "I got some results, but I gave up scrolling through them without finding it",
+        "q14_why_hard_to_find": "I had too many photos from different events around that same time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G2: Candidate Browsing & Inspection Failure",
+        "root_cause": "Multi-Event Overlap (Competing event at same location caused context window collision)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Pune"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_031",
+      "submission_timestamp": "2026-10-05T05:46:39.136Z",
+      "demographics": {
+        "age_group": "45-54",
+        "city": "Delhi NCR",
+        "occupation": "Business Owner",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "45-54",
+        "q2_city": "Delhi NCR",
+        "q3_occupation": "Business Owner",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "Moderate Urgency (Trying to settle a memory debate or show a photo to friends nearby)",
+        "q7_first_search_action": "Scroll back manually through the main timeline gallery",
+        "q8_vague_search_prompt": "Goa beach trip sunset with friends (Sample #31)",
+        "q9_target_media_description": "Beachfront shack dinner receipt and cocktail toast photo",
+        "q10_retry_behavior": "Switch from search bar to manual timeline scrolling",
+        "q11_anchor_memory_detail": "A distinct object, meal, or clothing item from an adjacent photo",
+        "q12_scroll_fatigue_threshold": "Less than 1 minute (Abandon quickly if not in Top-K results)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "The photo didn't have any obvious tags or text matching my search words",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Un-tagged Target Photo (Search engine failed to match vague keywords with un-tagged photo)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Business Owner in Delhi NCR"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_032",
+      "submission_timestamp": "2026-10-05T17:46:39.136Z",
+      "demographics": {
+        "age_group": "18-24",
+        "city": "Bangalore",
+        "occupation": "Software Engineer",
+        "photo_collection_size": "30,000+ photos",
+        "search_frequency": "Monthly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "18-24",
+        "q2_city": "Bangalore",
+        "q3_occupation": "Software Engineer",
+        "q4_collection_size": "30,000+ photos",
+        "q5_search_frequency": "Monthly",
+        "q6_search_urgency": "Low Urgency (Casual nostalgic browsing / looking back at old vacation memories)",
+        "q7_first_search_action": "Filter by People/Faces or Location tab",
+        "q8_vague_search_prompt": "Yosemite hiking trip mist trail mountains (Sample #32)",
+        "q9_target_media_description": "Hot soup dinner at mountain cabin in the evening",
+        "q10_retry_behavior": "Give up immediately and stop searching",
+        "q11_anchor_memory_detail": "Nothing specific — only a general feeling/time of year",
+        "q12_scroll_fatigue_threshold": "More than 5 minutes (Scroll until frustrated)",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "Location wasn't saved on the photo",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Missing GPS EXIF (Photo lacked location coordinates)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Software Engineer in Bangalore"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_033",
+      "submission_timestamp": "2026-10-06T05:46:39.136Z",
+      "demographics": {
+        "age_group": "25-34",
+        "city": "Mumbai",
+        "occupation": "Consultant",
+        "photo_collection_size": "5,000 - 15,000 photos",
+        "search_frequency": "Weekly"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "25-34",
+        "q2_city": "Mumbai",
+        "q3_occupation": "Consultant",
+        "q4_collection_size": "5,000 - 15,000 photos",
+        "q5_search_frequency": "Weekly",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Scanned vintage photo family reunion grandparents (Sample #33)",
+        "q9_target_media_description": "Grandparents 1985 wedding album physical print scan",
+        "q10_retry_behavior": "Try typing simpler or alternate keywords",
+        "q11_anchor_memory_detail": "A landmark or distinct location from earlier that day (e.g., hotel, beach, monument)",
+        "q12_scroll_fatigue_threshold": "1 to 3 minutes",
+        "q13_what_happened": "I tried scrolling back manually through my timeline/calendar, but got lost or gave up",
+        "q14_why_hard_to_find": "It was a scanned or old photo with the wrong date/timestamp",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G3: Timeline Navigation & Context Expansion Failure",
+        "root_cause": "Missing Timestamp EXIF (Scanned or historical photo lacked date metadata)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Consultant in Mumbai"
+      }
+    },
+    {
+      "response_id": "SURVEY_RESP_034",
+      "submission_timestamp": "2026-10-06T17:46:39.136Z",
+      "demographics": {
+        "age_group": "35-44",
+        "city": "Hyderabad",
+        "occupation": "Data Analyst",
+        "photo_collection_size": "15,000 - 30,000 photos",
+        "search_frequency": "Several times a month"
+      },
+      "consumer_survey_answers": {
+        "q1_age": "35-44",
+        "q2_city": "Hyderabad",
+        "q3_occupation": "Data Analyst",
+        "q4_collection_size": "15,000 - 30,000 photos",
+        "q5_search_frequency": "Several times a month",
+        "q6_search_urgency": "High Urgency (Need an official document, tax receipt, prescription, or paper bill right now)",
+        "q7_first_search_action": "Type a vague description or keywords into the search bar",
+        "q8_vague_search_prompt": "Receipt or office document lying on work desk (Sample #34)",
+        "q9_target_media_description": "Expense receipt paper document on office table",
+        "q10_retry_behavior": "Add a year or month to the search bar (e.g., 'Goa 2022')",
+        "q11_anchor_memory_detail": "The people who were with me in other photos taken around that time",
+        "q12_scroll_fatigue_threshold": "3 to 5 minutes",
+        "q13_what_happened": "The search returned no results or totally irrelevant photos",
+        "q14_why_hard_to_find": "I couldn't remember key details or landmark photos around that time",
+        "q15_feature_interest": "Yes, that would save me tons of time scrolling!"
+      },
+      "pm_analysis_mapping": {
+        "failure_stage": "Stage G1: Query Formulation & Initial Search Surfacing Failure",
+        "root_cause": "Sparse Context (No anchor landmark photo in 4-hour window)",
+        "perceived_helpfulness": "Yes - Very Helpful (Would save 5-10 mins of timeline scrolling)",
+        "user_persona": "Data Analyst in Hyderabad"
+      }
+    }
+  ]
+}

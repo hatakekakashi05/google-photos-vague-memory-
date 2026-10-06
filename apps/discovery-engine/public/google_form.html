@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Photos Vague-Memory Retrieval Primary Research Survey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', 'Google Sans', sans-serif; background-color: #f0ebf8; color: #202124; padding-bottom: 48px; }
+    
+    .form-container { max-width: 640px; margin: 24px auto; padding: 0 16px; }
+    
+    .form-header-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      border-top: 10px solid #673ab7;
+      border-left: 1px solid #dadce0;
+      border-right: 1px solid #dadce0;
+      border-bottom: 1px solid #dadce0;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(60,64,67,0.1);
+    }
+
+    .form-header-card h1 { font-size: 28px; font-weight: 400; color: #202124; margin-bottom: 8px; font-family: 'Google Sans'; }
+    .form-header-card p { font-size: 13px; color: #5f6368; line-height: 1.5; margin-bottom: 12px; }
+    .form-header-card .required-notice { font-size: 12px; color: #d93025; border-top: 1px solid #dadce0; padding-top: 12px; }
+
+    .form-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #dadce0;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(60,64,67,0.08);
+    }
+
+    .q-title { font-size: 15px; font-weight: 500; color: #202124; margin-bottom: 6px; }
+    .q-title span.req { color: #d93025; }
+    .q-help { font-size: 12px; color: #5f6368; margin-bottom: 12px; }
+
+    .radio-group label { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #202124; margin-bottom: 10px; cursor: pointer; }
+    .radio-group input[type="radio"] { accent-color: #673ab7; width: 18px; height: 18px; }
+
+    input[type="text"], textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #dadce0;
+      font-size: 14px;
+      padding: 8px 0;
+      outline: none;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus, textarea:focus { border-bottom: 2px solid #673ab7; }
+
+    .btn-container { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; }
+    .submit-btn {
+      background-color: #673ab7;
+      color: #ffffff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .submit-btn:hover { background-color: #5e35b1; }
+    .clear-btn { background: none; border: none; color: #673ab7; font-size: 13px; font-weight: 500; cursor: pointer; }
+    .success-banner { background-color: #e6f4ea; color: #137333; border: 1px solid #ceedd5; border-radius: 8px; padding: 24px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    
+    <!-- Form Header -->
+    <div class="form-header-card">
+      <h1>Google Photos Vague-Memory Retrieval Primary Research Survey</h1>
+      <p>Primary research survey studying vague-memory search friction, target photo retrieval bottlenecks, and timeline navigation patterns across photo archives.</p>
+      <div class="required-notice">* Indicates required question</div>
+    </div>
+
+    <form id="google-form" onsubmit="submitForm(event)">
+
+      <!-- Q1: Age -->
+      <div class="form-card">
+        <div class="q-title">1. What is your age group? <span class="req">*</span></div>
+        <div class="radio-group">
+          <label><input type="radio" name="q1" value="18-24" required> 18-24</label>
+          <label><input type="radio" name="q1" value="25-34"> 25-34</label>
+          <label><input type="radio" name="q1" value="35-44"> 35-44</label>
+          <label><input type="radio" name="q1" value="45-54"> 45-54</label>
+          <label><input type="radio" name="q1" value="55+"> 55+</label>
+        </div>
+      </div>
+
+      <!-- Q2: City -->
+      <div class="form-card">
+        <div class="q-title">2. Which city are you located in? <span class="req">*</span></div>
+        <div class="radio-group">
+          <label><input type="radio" name="q2" value="Pune" required> Pune</label>
+          <label><input type="radio" name="q2" value="Bangalore"> Bangalore</label>
+          <label><input type="radio" name="q2" value="Hyderabad"> Hyderabad</label>
+          <label><input type="radio" name="q2" value="Delhi NCR"> Delhi NCR</label>
+          <label><input type="radio" name="q2" value="Mumbai"> Mumbai</label>
+        </div>
+      </div>
+
+      <!-- Q3: Occupation -->
+      <div class="form-card">
+        <div class="q-title">3. What is your occupation? <span class="req">*</span></div>
+        <input type="text" name="q3" placeholder="Your answer" required>
+      </div>
+
+      <!-- Q4: Collection Size -->
+      <div class="form-card">
+        <div class="q-title">4. Approximately how many photos are in your library? <span class="req">*</span></div>
+        <div class="radio-group">
+          <label><input type="radio" name="q4" value="Under 5,000 photos" required> Under 5,000 photos</label>
+          <label><input type="radio" name="q4" value="5,000 - 15,000 photos"> 5,000 - 15,000 photos</label>
+          <label><input type="radio" name="q4" value="15,000 - 30,000 photos"> 15,000 - 30,000 photos</label>
+          <label><input type="radio" name="q4" value="30,000+ photos"> 30,000+ photos</label>
+        </div>
+      </div>
+
+      <!-- Q5: Search Frequency -->
+      <div class="form-card">
+        <div class="q-title">5. How frequently do you search for forgotten photos? <span class="req">*</span></div>
+        <div class="radio-group">
+          <label><input type="radio" name="q5" value="Daily" required> Daily</label>
+          <label><input type="radio" name="q5" value="Weekly"> Weekly</label>
+          <label><input type="radio" name="q5" value="Monthly"> Monthly</label>
+          <label><input type="radio" name="q5" value="Rarely"> Rarely</label>
+        </div>
+      </div>
+
+      <!-- Q6: Vague Query Prompt -->
+      <div class="form-card">
+        <div class="q-title">6. Vague Search Prompt: What text/keywords do you type when looking for a photo? <span class="req">*</span></div>
+        <div class="q-help">Example: "Goa beach trip sunset with friends" or "hiking in mountains dinner"</div>
+        <textarea name="q6" rows="2" placeholder="Your answer" required></textarea>
+      </div>
+
+      <!-- Q7: Target Media Description -->
+      <div class="form-card">
+        <div class="q-title">7. Target Media Description: What specific photo or document were you looking for? <span class="req">*</span></div>
+        <div class="q-help">Example: "Beachfront shack dinner receipt" or "photo of grandparents scanned print"</div>
+        <textarea name="q7" rows="2" placeholder="Your answer" required></textarea>
+      </div>
+
+      <!-- Q8: Failure Stage -->
+      <div class="form-card">
+        <div class="q-title">8. At which stage did your search fail or stall? <span class="req">*</span></div>
+        <div class="radio-group">
+          <label><input type="radio" name="q8" value="Stage G1: Query Formulation & Initial Search Surfacing" required> Stage G1: Query Formulation (Zero or irrelevant search results)</label>
+          <label><input type="radio" name="q8" value="Stage G2: Candidate Browsing & Inspection"> Stage G2: Candidate Browsing (Browsed results but abandoned without finding target)</label>
+          <label><input type="radio" name="q8" value="Stage G3: Timeline Navigation & Context Expansion"> Stage G3: Timeline Navigation (Lost in manual gallery timeline scrolling)</label>
+        </div>
+      </div>
+
+      <!-- Q9: Root Cause -->
+      <div class="form-card">
+        <div class="q-title">9. What was the primary root cause of the retrieval failure? <span class="req">*</span></div>
+        <div class="radio-group">
+          <label><input type="radio" name="q9" value="Un-tagged Target Photo" required> Un-tagged Target Photo (Target object was un-tagged)</label>
+          <label><input type="radio" name="q9" value="Missing GPS EXIF"> Missing GPS EXIF (Photo lacked GPS coordinates)</label>
+          <label><input type="radio" name="q9" value="Missing Timestamp EXIF"> Missing Timestamp EXIF (Scanned/historical photo lacked date metadata)</label>
+          <label><input type="radio" name="q9" value="Sparse Context"> Sparse Context (No anchor landmark photo in window)</label>
+          <label><input type="radio" name="q9" value="Multi-Event Overlap"> Multi-Event Overlap (Competing morning/evening events)</label>
+        </div>
+      </div>
+
+      <!-- Q10: 1-Tap Helpfulness -->
+      <div class="form-card">
+        <div class="q-title">10. Would a "1-Tap Contextual Jump & Expand" feature help solve this? <span class="req">*</span></div>
+        <div class="radio-group">
+          <label><input type="radio" name="q10" value="Yes - Very Helpful" required> Yes - Very Helpful (Saves 5-10 mins of scrolling)</label>
+          <label><input type="radio" name="q10" value="Somewhat Helpful"> Somewhat Helpful</label>
+          <label><input type="radio" name="q10" value="Not Helpful"> Not Helpful</label>
+        </div>
+      </div>
+
+      <!-- Submit Button Container -->
+      <div class="btn-container">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="reset" class="clear-btn">Clear form</button>
+      </div>
+
+    </form>
+
+    <div id="success-view" style="display: none;" class="success-banner">
+      <h2>Response recorded.</h2>
+      <p style="font-size:13px;margin-top:8px;">Thank you for participating in the Google Photos Vague-Memory Retrieval Primary Research Survey.</p>
+      <button onclick="location.reload()" class="clear-btn" style="margin-top:16px;">Submit another response</button>
+    </div>
+
+  </div>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('google-form').style.display = 'none';
+      document.getElementById('success-view').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

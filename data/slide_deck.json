@@ -1,0 +1,113 @@
+{
+  "deck_title": "Google Photos Vague-Memory Retrieval PM Case & AI-Native MVP",
+  "total_slides": 10,
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Executive Overview & Program Summary",
+      "subtitle": "Transforming Vague Search Failures into 1-Tap Timeline Context Discovery",
+      "content": [
+        "**Target Problem (CFM-01):** Vague-memory search failure at Stage G1 (Query Formulation & Initial Search Surfacing). Users recall vivid anchor events but fail to locate non-memorable target photos.",
+        "**Approved Solution:** Concept A ('Contextual Jump & Expand', Value Score 8.93/10).",
+        "**Core Innovation:** 1-tap transition from candidate anchor photo discovery to a chronological timeline context grid (±4.0h, ≤1.0km).",
+        "**Prototype Status:** Local Synthetic Prototype Complete & Operational (http://localhost:3000).",
+        "**Audit Status:** Documented audit checklist found no unresolved Critical or Major non-compliances (Self-review completed; independent audit required)."
+      ]
+    },
+    {
+      "slide_number": 2,
+      "title": "Strategic Context & Business Scope (Phases 0–1)",
+      "subtitle": "Google Photos Ecosystem & Strategic Opportunity",
+      "content": [
+        "**Ecosystem Scale:** Serving billions of users managing massive personal photo archives.",
+        "**User Friction:** Search degradation when users cannot recall exact keywords, dates, or tags for specific target items (receipts, document scans, specific dinner photos).",
+        "**Strategic Goal:** Unlock passive memory discovery and improve User Vague-Memory Retrieval Success Rate (User VMRSR).",
+        "**Non-Goal Boundary:** Prototype operates on synthetic demonstration data only; does not alter Google Photos production infrastructure or claim proprietary internal feature flag access."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Evidence Synthesis & Failure Population (Phases 1–2)",
+      "subtitle": "Qualitative & Empirical Evidence Synthesis",
+      "content": [
+        "**Evidence Base:** 41 verified public-evidence records.",
+        "**Target Population:** N=34 records in the User Failure-Evidence Population.",
+        "**Core Failure Pattern:** 76% of vague searches stall because users recall the surrounding event anchor (e.g., 'Goa beach trip') rather than the target object metadata.",
+        "**Discovery Engine (UI #1):** Purpose-built problem-discovery tool to analyze failure evidence distributions and codify vague query taxonomy."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Metric Decomposition & Stage G1 Failure Mode (Phases 3–4)",
+      "subtitle": "Canonical Metric Tree & Funnel Bottleneck",
+      "content": [
+        "**Primary Metric:** User VMRSR = (Unique active users with ≥1 vague search AND ≥1 operational retrieval success) / (Unique active users with ≥1 vague search).",
+        "**Stage G1 Bottleneck:** 68% of failure sessions terminate at initial query formulation when standard keyword search returns zero relevant results for un-tagged target photos.",
+        "**Metric Tree Layering:** User VMRSR decomposes into Candidate Anchor Discovery Rate (ADR) and Target Context Reachability Rate."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Problem Definition — Vague Memory Retrieval (CFM-01)",
+      "subtitle": "Failure Taxonomy & Ground-Truth Isolation",
+      "content": [
+        "**CFM-01 Definition:** Critical Failure Mode 01 identifies the inability of traditional semantic text search to bridge the gap between vague event memories and specific target media.",
+        "**Ground-Truth Isolation Rule:** Evaluation ground-truth labels (expected anchor ID, expected target ID, scenario ID) are strictly isolated inside post-hoc evaluation scripts and never fed into retrieval ranking or context expansion logic."
+      ]
+    },
+    {
+      "slide_number": 6,
+      "title": "Solution Exploration & Concept Selection (Phase 5)",
+      "subtitle": "Concept Evaluation & Choice of Concept A (Score 8.93)",
+      "content": [
+        "**Concept A ('Contextual Jump & Expand'):** Score 8.93/10 (Recommended). Uses 1-tap contextual jump to navigate from memorable anchor to timeline context grid.",
+        "**Concept B ('Semantic Multi-Hop RAG'):** Score 6.40/10. Rejected due to high latency and complex multi-modal dependency risks.",
+        "**Concept C ('Manual Metadata Tagging'):** Score 4.10/10. Rejected due to excessive user friction and low adoption."
+      ]
+    },
+    {
+      "slide_number": 7,
+      "title": "UI #1 — AI-Powered Discovery Engine (Problem Analysis Tool)",
+      "subtitle": "Internal Problem Discovery & Failure Analysis Tool",
+      "content": [
+        "**Tool Identity:** UI #1 is the internal problem discovery and evidence analysis tool.",
+        "**Functionality:** Audits the N=34 failure evidence population, visualizes Stage G1 vs G2 vs G3 failure rates, and breaks down query pattern taxonomies.",
+        "**Separation Rule:** UI #1 (Discovery Engine) is strictly distinct from UI #2 (Solution MVP Prototype)."
+      ]
+    },
+    {
+      "slide_number": 8,
+      "title": "UI #2 — Google Photos Vague-Memory Retrieval MVP (Solution Prototype)",
+      "subtitle": "3-Screen Interactive Solution Prototype (Phases P1–P4)",
+      "content": [
+        "**Tool Identity:** UI #2 is the solution prototype built across Phases P1–P8.",
+        "**Screen 1:** Vague search bar + P3 AI Signal Parser inspector + candidate anchor cards with non-probabilistic Prototype Similarity Scores.",
+        "**Screen 2:** Selected anchor summary + chronological timeline context grid (±4.0h, ≤1.0km).",
+        "**Screen 3:** Fallback affordances (Missing EXIF: 'View Date in Timeline', Sparse Context: 'No Additional Photos Found', Multi-Event: 'MULTI_EVENT_SEPARATION')."
+      ]
+    },
+    {
+      "slide_number": 9,
+      "title": "Empirical Benchmark & Governance Audit (Phases P2 & P5–P7)",
+      "subtitle": "Ground-Truth Isolated Results & Audit Findings",
+      "content": [
+        "**Candidate Anchor Discovery Rate (ADR Proxy):** 60.0% (3/5 scenarios).",
+        "**Target Context Reachability Rate:** 50.0% (1/2 anchor-to-target scenarios).",
+        "**Edge-Case Handling Pass Rate:** 100.0% (3/3 edge cases).",
+        "**REST API Integration Pass Rate:** 100.0% (5/5 scenarios 200 OK).",
+        "**Audit Finding:** Documented audit checklist found no unresolved Critical or Major non-compliances (Self-review completed; independent audit required)."
+      ]
+    },
+    {
+      "slide_number": 10,
+      "title": "Experimentation Roadmap & Vercel Deployment (Phase 8)",
+      "subtitle": "A/B Testing Strategy, Feature Control & Production Hosting",
+      "content": [
+        "**Experiment Control:** Treatment enabled through validated experiment-control mechanism.",
+        "**Target Metric:** Improvement in canonical User VMRSR versus control.",
+        "**Rollout Ramp:** 1% → 5% → 25% → 100% rollout schedule with remote kill-switch capability.",
+        "**Vercel Cloud Hosting:** Configured with serverless function routes (/api/*) for static asset and API endpoint hosting."
+      ]
+    }
+  ]
+}
