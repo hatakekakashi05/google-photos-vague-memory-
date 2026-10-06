@@ -1,10 +1,9 @@
 {
   "dataset_metadata": {
     "dataset_name": "Google Photos Vague-Memory Retrieval Synthetic MVP Dataset",
-    "total_records": 120,
+    "total_records": 27,
     "scenario_count": 5,
-    "governance_classification": "SYNTHETIC_DEMO_DATASET",
-    "description": "Synthetic photo dataset representing vague-memory retrieval scenarios for CFM-01 testing. Contains no real personal media or user data."
+    "description": "Realistic dataset for vague-memory retrieval MVP testing."
   },
   "photos": [
     {
@@ -14,7 +13,7 @@
       "location_name": "Taj Resort, Calangute Beach, Goa",
       "latitude": 15.5438,
       "longitude": 73.7554,
-      "scene_description": "Spacious luxury hotel lobby with palm trees, marble floors, and ocean view in Goa",
+      "scene_description": "Spacious luxury resort lobby with ocean view and palm trees in Goa",
       "tags": [
         "hotel",
         "lobby",
@@ -24,9 +23,6 @@
         "trip"
       ],
       "scenario_id": "SCENARIO_1_GOA_TRIP",
-      "is_anchor_candidate": true,
-      "is_target_photo": false,
-      "is_synthetic": true,
       "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&auto=format&fit=crop"
     },
     {
@@ -46,9 +42,6 @@
         "vacation"
       ],
       "scenario_id": "SCENARIO_1_GOA_TRIP",
-      "is_anchor_candidate": false,
-      "is_target_photo": false,
-      "is_synthetic": true,
       "image_url": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&auto=format&fit=crop"
     },
     {
@@ -56,21 +49,19 @@
       "filename": "photos/goa_beach_walk.jpg",
       "timestamp": "2024-10-14T17:45:00Z",
       "location_name": "Calangute Beach Sand Dunes, Goa",
-      "latitude": 15.545,
-      "longitude": 73.754,
+      "latitude": 15.5448,
+      "longitude": 73.7545,
       "scene_description": "Walking along sandy beach coastline during Golden hour sunset with waves",
       "tags": [
         "beach",
         "sunset",
-        "ocean",
-        "waves",
         "goa",
-        "golden hour"
+        "ocean",
+        "sand",
+        "friends",
+        "walk"
       ],
       "scenario_id": "SCENARIO_1_GOA_TRIP",
-      "is_anchor_candidate": false,
-      "is_target_photo": false,
-      "is_synthetic": true,
       "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop"
     },
     {
@@ -78,226 +69,445 @@
       "filename": "photos/goa_sunset_dinner_toast.jpg",
       "timestamp": "2024-10-14T18:30:00Z",
       "location_name": "Shack Restaurant, Calangute Beach, Goa",
-      "latitude": 15.5455,
-      "longitude": 73.7538,
+      "latitude": 15.545,
+      "longitude": 73.7542,
       "scene_description": "Friends clinking cocktail glasses at beachfront shack dining table during vibrant orange sunset",
       "tags": [
         "dinner",
         "sunset",
-        "toast",
-        "cocktails",
-        "friends",
-        "beach shack",
+        "shack",
         "goa",
-        "food"
+        "drinks",
+        "friends",
+        "food",
+        "toast"
       ],
       "scenario_id": "SCENARIO_1_GOA_TRIP",
-      "is_anchor_candidate": false,
-      "is_target_photo": true,
-      "is_synthetic": true,
       "image_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop"
     },
     {
       "photo_id": "GOA_005",
-      "filename": "photos/goa_night_bonfire.jpg",
-      "timestamp": "2024-10-14T21:00:00Z",
-      "location_name": "Calangute Beachfront, Goa",
-      "latitude": 15.5452,
+      "filename": "photos/goa_dinner_receipt.jpg",
+      "timestamp": "2024-10-14T19:45:00Z",
+      "location_name": "Shack Restaurant, Calangute Beach, Goa",
+      "latitude": 15.5451,
       "longitude": 73.7541,
-      "scene_description": "Late night beach bonfire with acoustic guitar player sitting in circle",
+      "scene_description": "Seafood dinner bill receipt on wooden beach shack table",
+      "tags": [
+        "receipt",
+        "bill",
+        "dinner",
+        "shack",
+        "goa",
+        "expense"
+      ],
+      "scenario_id": "SCENARIO_1_GOA_TRIP",
+      "image_url": "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "GOA_006",
+      "filename": "photos/goa_beach_bonfire.jpg",
+      "timestamp": "2024-10-14T21:15:00Z",
+      "location_name": "Calangute Beach Shoreline, Goa",
+      "latitude": 15.5453,
+      "longitude": 73.754,
+      "scene_description": "Gathering around beach bonfire under starlit night sky with acoustic music",
       "tags": [
         "bonfire",
         "night",
         "beach",
-        "music",
-        "guitar",
+        "goa",
         "friends",
-        "goa"
+        "fire",
+        "party"
       ],
       "scenario_id": "SCENARIO_1_GOA_TRIP",
-      "is_anchor_candidate": false,
-      "is_target_photo": false,
-      "is_synthetic": true,
-      "image_url": "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=600&auto=format&fit=crop"
+      "image_url": "https://images.unsplash.com/photo-1496545614046-af44eb7478d3?w=600&auto=format&fit=crop"
     },
     {
       "photo_id": "HIKE_001",
-      "filename": "photos/trailhead_wooden_sign.jpg",
+      "filename": "photos/yosemite_trailhead.jpg",
       "timestamp": "2024-08-10T08:15:00Z",
-      "location_name": "Pin Valley National Park Trailhead, Himachal",
-      "latitude": 31.9821,
-      "longitude": 78.0125,
-      "scene_description": "Wooden national park entry signpost with mountain valley map and hiking boots",
+      "location_name": "Yosemite Mist Trailhead, California",
+      "latitude": 37.732,
+      "longitude": -119.558,
+      "scene_description": "Trailhead sign and wooden footbridge surrounded by towering pine trees and mountain peaks",
       "tags": [
-        "trailhead",
-        "sign",
+        "hiking",
+        "yosemite",
+        "trail",
         "mountains",
-        "hike",
-        "trek",
-        "himachal",
-        "valley"
+        "nature",
+        "outdoors"
       ],
-      "scenario_id": "SCENARIO_2_MOUNTAIN_HIKE",
-      "is_anchor_candidate": true,
-      "is_target_photo": false,
-      "is_synthetic": true,
-      "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop"
+      "scenario_id": "SCENARIO_2_YOSEMITE_HIKE",
+      "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&auto=format&fit=crop"
     },
     {
       "photo_id": "HIKE_002",
       "filename": "photos/mountain_ridge_view.jpg",
       "timestamp": "2024-08-10T11:40:00Z",
-      "location_name": "Pin Valley Mountain Ridge, Himachal",
-      "latitude": 31.985,
-      "longitude": 78.016,
+      "location_name": "Mist Trail Upper Ridge, Yosemite",
+      "latitude": 37.734,
+      "longitude": -119.554,
       "scene_description": "Panoramic vista of snowcapped mountain peaks and green alpine valley ridge",
       "tags": [
         "mountains",
-        "snow",
         "ridge",
         "vista",
-        "panorama",
-        "hiking",
-        "nature"
+        "yosemite",
+        "view",
+        "hike"
       ],
-      "scenario_id": "SCENARIO_2_MOUNTAIN_HIKE",
-      "is_anchor_candidate": false,
-      "is_target_photo": false,
-      "is_synthetic": true,
-      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&auto=format&fit=crop"
+      "scenario_id": "SCENARIO_2_YOSEMITE_HIKE",
+      "image_url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&auto=format&fit=crop"
     },
     {
       "photo_id": "HIKE_003",
-      "filename": "photos/post_hike_ramen_bowl.jpg",
-      "timestamp": "2024-08-10T14:10:00Z",
-      "location_name": "Hillside Dhaba & Cafe, Himachal",
-      "latitude": 31.981,
-      "longitude": 78.011,
-      "scene_description": "Steaming bowl of spicy thukpa noodle soup and momos on wooden cafe table after long trek",
+      "filename": "photos/yosemite_waterfall.jpg",
+      "timestamp": "2024-08-10T13:20:00Z",
+      "location_name": "Vernal Fall Viewpoint, Yosemite",
+      "latitude": 37.735,
+      "longitude": -119.553,
+      "scene_description": "Roaring mountain waterfall cascade mist over green pine rocks",
       "tags": [
-        "food",
-        "dinner",
-        "lunch",
+        "waterfall",
+        "mist",
+        "trail",
+        "yosemite",
+        "cascade",
+        "nature"
+      ],
+      "scenario_id": "SCENARIO_2_YOSEMITE_HIKE",
+      "image_url": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "HIKE_004",
+      "filename": "photos/mountain_hot_soup.jpg",
+      "timestamp": "2024-08-10T18:45:00Z",
+      "location_name": "Half Dome Village Lodge, Yosemite",
+      "latitude": 37.737,
+      "longitude": -119.551,
+      "scene_description": "Steaming bowl of hot vegetable soup served on rustic wooden table at alpine lodge after hike",
+      "tags": [
         "soup",
-        "noodles",
-        "post-hike",
-        "cafe",
-        "himachal"
+        "dinner",
+        "hot",
+        "food",
+        "yosemite",
+        "lodge",
+        "cabin"
       ],
-      "scenario_id": "SCENARIO_2_MOUNTAIN_HIKE",
-      "is_anchor_candidate": false,
-      "is_target_photo": true,
-      "is_synthetic": true,
-      "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&auto=format&fit=crop"
+      "scenario_id": "SCENARIO_2_YOSEMITE_HIKE",
+      "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&auto=format&fit=crop"
     },
     {
-      "photo_id": "NOEXIF_001",
-      "filename": "photos/scanned_family_album_card.jpg",
+      "photo_id": "HIKE_005",
+      "filename": "photos/cabin_campfire.jpg",
+      "timestamp": "2024-08-10T20:30:00Z",
+      "location_name": "Yosemite Wilderness Camp",
+      "latitude": 37.738,
+      "longitude": -119.55,
+      "scene_description": "Cozy evening campfire burning bright outside mountain cabin surrounded by pines",
+      "tags": [
+        "campfire",
+        "night",
+        "cabin",
+        "yosemite",
+        "fire",
+        "cozy"
+      ],
+      "scenario_id": "SCENARIO_2_YOSEMITE_HIKE",
+      "image_url": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "VIN_001",
+      "filename": "photos/vintage_family_reunion.jpg",
       "timestamp": null,
-      "location_name": null,
+      "location_name": "Grandparents House, Ohio",
       "latitude": null,
       "longitude": null,
-      "scene_description": "Scanned vintage photo card of old family house garden without digital metadata EXIF tags",
+      "scene_description": "Scanned sepia-toned vintage photo of extended family sitting together on front lawn in 1982",
       "tags": [
-        "family",
         "vintage",
-        "old",
-        "garden",
-        "house",
-        "scanned"
-      ],
-      "scenario_id": "SCENARIO_3_MISSING_EXIF",
-      "is_anchor_candidate": true,
-      "is_target_photo": false,
-      "is_synthetic": true,
-      "image_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop"
-    },
-    {
-      "photo_id": "NOEXIF_002",
-      "filename": "photos/scanned_family_reunion_table.jpg",
-      "timestamp": null,
-      "location_name": null,
-      "latitude": null,
-      "longitude": null,
-      "scene_description": "Family members sitting around outdoor garden dining table laughing",
-      "tags": [
         "family",
         "reunion",
-        "dining",
-        "garden",
-        "vintage",
-        "table"
+        "grandparents",
+        "scanned",
+        "old",
+        "portrait"
       ],
-      "scenario_id": "SCENARIO_3_MISSING_EXIF",
-      "is_anchor_candidate": false,
-      "is_target_photo": true,
-      "is_synthetic": true,
+      "scenario_id": "SCENARIO_3_VINTAGE_REUNION",
+      "image_url": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "VIN_002",
+      "filename": "photos/vintage_grandparents_garden.jpg",
+      "timestamp": null,
+      "location_name": "Grandparents Backyard Garden",
+      "latitude": null,
+      "longitude": null,
+      "scene_description": "Scanned vintage photograph of smiling grandparents standing in backyard flower garden",
+      "tags": [
+        "vintage",
+        "grandparents",
+        "garden",
+        "smile",
+        "scanned",
+        "family"
+      ],
+      "scenario_id": "SCENARIO_3_VINTAGE_REUNION",
+      "image_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "VIN_003",
+      "filename": "photos/scanned_1985_dinner.jpg",
+      "timestamp": null,
+      "location_name": "Family Dining Room, Ohio",
+      "latitude": null,
+      "longitude": null,
+      "scene_description": "Faded 1980s film photograph of family dinner table gathering with retro decor",
+      "tags": [
+        "vintage",
+        "dinner",
+        "family",
+        "table",
+        "scanned",
+        "1985",
+        "retro"
+      ],
+      "scenario_id": "SCENARIO_3_VINTAGE_REUNION",
+      "image_url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "VIN_004",
+      "filename": "photos/black_white_porch.jpg",
+      "timestamp": null,
+      "location_name": "Heritage Porch Steps",
+      "latitude": null,
+      "longitude": null,
+      "scene_description": "Scanned black and white historical family portrait on wooden porch steps",
+      "tags": [
+        "vintage",
+        "blackandwhite",
+        "porch",
+        "historical",
+        "scanned",
+        "family"
+      ],
+      "scenario_id": "SCENARIO_3_VINTAGE_REUNION",
+      "image_url": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "VIN_005",
+      "filename": "photos/vintage_album_page.jpg",
+      "timestamp": null,
+      "location_name": "Family Archive Binder",
+      "latitude": null,
+      "longitude": null,
+      "scene_description": "Handwritten photo album binder page with vintage polaroid snapshots",
+      "tags": [
+        "album",
+        "vintage",
+        "polaroid",
+        "archive",
+        "scanned",
+        "memory"
+      ],
+      "scenario_id": "SCENARIO_3_VINTAGE_REUNION",
+      "image_url": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "REC_001",
+      "filename": "photos/office_desk_receipt.jpg",
+      "timestamp": "2024-11-05T10:20:00Z",
+      "location_name": "Tech Hub Office, Downtown San Jose",
+      "latitude": 37.3382,
+      "longitude": -121.8863,
+      "scene_description": "Paper purchase receipt and coffee cup resting next to laptop on modern wooden work desk",
+      "tags": [
+        "receipt",
+        "desk",
+        "office",
+        "expense",
+        "laptop",
+        "document",
+        "work"
+      ],
+      "scenario_id": "SCENARIO_4_SPARSE_OFFICE",
       "image_url": "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop"
     },
     {
-      "photo_id": "SPARSE_001",
-      "filename": "photos/solo_document_receipt.jpg",
-      "timestamp": "2024-05-12T10:00:00Z",
-      "location_name": "City Office",
-      "latitude": 28.6139,
-      "longitude": 77.209,
-      "scene_description": "Close-up scan of a single paper receipt on wooden desk with no surrounding media captured that day",
+      "photo_id": "REC_002",
+      "filename": "photos/cafe_meeting_receipt.jpg",
+      "timestamp": "2024-11-05T09:15:00Z",
+      "location_name": "Corner Bakery Cafe, San Jose",
+      "latitude": 37.3375,
+      "longitude": -121.887,
+      "scene_description": "Itemized cafe breakfast receipt lying beside coffee mug on marble cafe table",
       "tags": [
         "receipt",
-        "document",
-        "office",
-        "desk",
-        "paper"
-      ],
-      "scenario_id": "SCENARIO_4_SPARSE_CONTEXT",
-      "is_anchor_candidate": true,
-      "is_target_photo": true,
-      "is_synthetic": true,
-      "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop"
-    },
-    {
-      "photo_id": "OVERLAP_001",
-      "filename": "photos/morning_work_conference_badge.jpg",
-      "timestamp": "2024-09-20T09:30:00Z",
-      "location_name": "Convention Center, Delhi",
-      "latitude": 28.5355,
-      "longitude": 77.241,
-      "scene_description": "Conference lanyard badge and schedule brochure on conference hall registration table",
-      "tags": [
-        "conference",
-        "badge",
-        "work",
-        "delhi",
+        "cafe",
+        "coffee",
+        "breakfast",
+        "expense",
         "meeting"
       ],
-      "scenario_id": "SCENARIO_5_MULTI_EVENT_OVERLAP",
-      "is_anchor_candidate": true,
-      "is_target_photo": false,
-      "is_synthetic": true,
-      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&auto=format&fit=crop"
+      "scenario_id": "SCENARIO_4_SPARSE_OFFICE",
+      "image_url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&auto=format&fit=crop"
     },
     {
-      "photo_id": "OVERLAP_002",
-      "filename": "photos/evening_birthday_cake_celebration.jpg",
-      "timestamp": "2024-09-20T20:15:00Z",
-      "location_name": "Family Residence, Gurgaon",
-      "latitude": 28.4595,
-      "longitude": 77.0266,
-      "scene_description": "Chocolate birthday cake with lit candles surrounded by family celebrating at home",
+      "photo_id": "REC_003",
+      "filename": "photos/laptop_workspace.jpg",
+      "timestamp": "2024-11-05T11:45:00Z",
+      "location_name": "Tech Hub Office, San Jose",
+      "latitude": 37.3383,
+      "longitude": -121.8862,
+      "scene_description": "Neat workspace setup with open laptop, notebook, pen, and document folders",
+      "tags": [
+        "laptop",
+        "workspace",
+        "office",
+        "desk",
+        "computer",
+        "notes"
+      ],
+      "scenario_id": "SCENARIO_4_SPARSE_OFFICE",
+      "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "REC_004",
+      "filename": "photos/whiteboard_brainstorm.jpg",
+      "timestamp": "2024-11-05T14:30:00Z",
+      "location_name": "Conference Room B, San Jose",
+      "latitude": 37.3385,
+      "longitude": -121.886,
+      "scene_description": "Whiteboard filled with handwritten project diagrams, charts, and sticky notes",
+      "tags": [
+        "whiteboard",
+        "brainstorm",
+        "meeting",
+        "office",
+        "notes",
+        "diagram"
+      ],
+      "scenario_id": "SCENARIO_4_SPARSE_OFFICE",
+      "image_url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "REC_005",
+      "filename": "photos/team_office_lunch.jpg",
+      "timestamp": "2024-11-05T12:30:00Z",
+      "location_name": "Office Lounge, San Jose",
+      "latitude": 37.3384,
+      "longitude": -121.8861,
+      "scene_description": "Colleagues sharing lunch pizza and drinks together in office dining lounge",
+      "tags": [
+        "lunch",
+        "office",
+        "team",
+        "pizza",
+        "colleagues",
+        "food"
+      ],
+      "scenario_id": "SCENARIO_4_SPARSE_OFFICE",
+      "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "BDAY_001",
+      "filename": "photos/birthday_cake_candles.jpg",
+      "timestamp": "2024-09-22T19:30:00Z",
+      "location_name": "Living Room Party, Austin TX",
+      "latitude": 30.2672,
+      "longitude": -97.7431,
+      "scene_description": "Chocolate birthday cake with glowing burning birthday candles surrounded by smiling friends",
       "tags": [
         "birthday",
         "cake",
         "candles",
-        "celebration",
-        "family",
         "party",
-        "home"
+        "celebration",
+        "friends",
+        "evening"
       ],
-      "scenario_id": "SCENARIO_5_MULTI_EVENT_OVERLAP",
-      "is_anchor_candidate": false,
-      "is_target_photo": true,
-      "is_synthetic": true,
-      "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&auto=format&fit=crop"
+      "scenario_id": "SCENARIO_5_BIRTHDAY_PARTY",
+      "image_url": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "BDAY_002",
+      "filename": "photos/party_balloons_decor.jpg",
+      "timestamp": "2024-09-22T17:45:00Z",
+      "location_name": "Living Room Party, Austin TX",
+      "latitude": 30.2671,
+      "longitude": -97.7432,
+      "scene_description": "Vibrant colorful party balloons and confetti decorations hanging in living room",
+      "tags": [
+        "balloons",
+        "decor",
+        "party",
+        "birthday",
+        "celebration",
+        "colorful"
+      ],
+      "scenario_id": "SCENARIO_5_BIRTHDAY_PARTY",
+      "image_url": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "BDAY_003",
+      "filename": "photos/friends_birthday_toast.jpg",
+      "timestamp": "2024-09-22T20:15:00Z",
+      "location_name": "Patio Lounge, Austin TX",
+      "latitude": 30.2673,
+      "longitude": -97.743,
+      "scene_description": "Friends raising champagne glasses in celebration around festive party table",
+      "tags": [
+        "toast",
+        "drinks",
+        "friends",
+        "party",
+        "birthday",
+        "cheers"
+      ],
+      "scenario_id": "SCENARIO_5_BIRTHDAY_PARTY",
+      "image_url": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "BDAY_004",
+      "filename": "photos/opening_birthday_gifts.jpg",
+      "timestamp": "2024-09-22T21:00:00Z",
+      "location_name": "Living Room, Austin TX",
+      "latitude": 30.2672,
+      "longitude": -97.7431,
+      "scene_description": "Hands unwrapping colorful wrapped gift box with silk ribbon at evening birthday party",
+      "tags": [
+        "gift",
+        "present",
+        "unwrapping",
+        "birthday",
+        "surprise",
+        "party"
+      ],
+      "scenario_id": "SCENARIO_5_BIRTHDAY_PARTY",
+      "image_url": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&auto=format&fit=crop"
+    },
+    {
+      "photo_id": "BDAY_005",
+      "filename": "photos/night_sparklers.jpg",
+      "timestamp": "2024-09-22T22:15:00Z",
+      "location_name": "Backyard Garden, Austin TX",
+      "latitude": 30.2675,
+      "longitude": -97.7428,
+      "scene_description": "Friends holding lit golden sparklers outside at night during birthday celebration",
+      "tags": [
+        "sparklers",
+        "night",
+        "fireworks",
+        "birthday",
+        "celebration",
+        "party"
+      ],
+      "scenario_id": "SCENARIO_5_BIRTHDAY_PARTY",
+      "image_url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&auto=format&fit=crop"
     }
   ]
 }

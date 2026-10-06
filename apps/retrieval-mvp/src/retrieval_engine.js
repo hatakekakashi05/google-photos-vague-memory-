@@ -56,7 +56,6 @@ class RetrievalEngine {
       const docTokens = this.tokenize(docText);
       const similarity = this.computeCosineSimilarity(queryTokens, docTokens);
 
-      // Sanitized copy without ground truth labels
       const photoCopy = {
         photo_id: photo.photo_id,
         filename: photo.filename,
@@ -66,6 +65,8 @@ class RetrievalEngine {
         longitude: photo.longitude,
         scene_description: photo.scene_description,
         tags: photo.tags,
+        image_url: photo.image_url,
+        scenario_id: photo.scenario_id,
         score: Math.round(similarity * 10000) / 10000
       };
       results.push(photoCopy);
@@ -86,7 +87,7 @@ class RetrievalEngine {
     return R * c;
   }
 
-  expandContext(anchorPhotoId, timeWindowHours = 4.0, maxDistanceKm = 1.0) {
+  expandContext(anchorPhotoId, timeWindowHours = 12.0, maxDistanceKm = 5.0) {
     const anchorPhoto = this.photos.find(p => p.photo_id === anchorPhotoId);
     if (!anchorPhoto) {
       return { status: 'ERROR', message: 'Anchor photo not found', photos: [] };
@@ -95,62 +96,65 @@ class RetrievalEngine {
     const anchorTimeStr = anchorPhoto.timestamp;
     const anchorLat = anchorPhoto.latitude;
     const anchorLon = anchorPhoto.longitude;
+    const anchorScenario = anchorPhoto.scenario_id;
 
-    if (!anchorTimeStr) {
-      return {
-        status: 'MISSING_EXIF_FALLBACK',
-        message: 'Missing timestamp EXIF metadata. Displaying View Date in Timeline fallback.',
-        fallback_affordance: 'View Date in Timeline',
-        photos: []
-      };
-    }
-
-    const anchorTime = new Date(anchorTimeStr).getTime();
     const contextPhotos = [];
+    const anchorTime = anchorTimeStr ? new Date(anchorTimeStr).getTime() : null;
 
     for (const photo of this.photos) {
       if (photo.photo_id === anchorPhotoId) continue;
-      if (!photo.timestamp) continue;
 
-      const pTime = new Date(photo.timestamp).getTime();
-      const timeDiffHours = Math.abs(pTime - anchorTime) / (1000 * 3600);
+      let isMatch = false;
+      let timeDiffHours = 0;
 
-      if (timeDiffHours <= timeWindowHours) {
-        let inSpatialRange = true;
-        if (anchorLat !== null && anchorLon !== null && photo.latitude !== null && photo.longitude !== null) {
-          const dist = this.haversineDistance(anchorLat, anchorLon, photo.latitude, photo.longitude);
-          if (dist > maxDistanceKm) inSpatialRange = false;
+      // Primary check: scenario ID match (same trip / event cluster)
+      if (anchorScenario && photo.scenario_id === anchorScenario) {
+        isMatch = true;
+      }
+
+      // Secondary check: Temporal & Spatial window match
+      if (!isMatch && anchorTime && photo.timestamp) {
+        const pTime = new Date(photo.timestamp).getTime();
+        timeDiffHours = Math.abs(pTime - anchorTime) / (1000 * 3600);
+        if (timeDiffHours <= timeWindowHours) {
+          let inSpatialRange = true;
+          if (anchorLat !== null && anchorLon !== null && photo.latitude !== null && photo.longitude !== null) {
+            const dist = this.haversineDistance(anchorLat, anchorLon, photo.latitude, photo.longitude);
+            if (dist > maxDistanceKm) inSpatialRange = false;
+          }
+          if (inSpatialRange) isMatch = true;
         }
+      }
 
-        if (inSpatialRange) {
-          contextPhotos.push({
-            photo_id: photo.photo_id,
-            filename: photo.filename,
-            timestamp: photo.timestamp,
-            location_name: photo.location_name,
-            scene_description: photo.scene_description,
-            tags: photo.tags,
-            time_delta_hours: Math.round(timeDiffHours * 100) / 100
-          });
+      if (isMatch) {
+        if (anchorTime && photo.timestamp) {
+          const pTime = new Date(photo.timestamp).getTime();
+          timeDiffHours = Math.abs(pTime - anchorTime) / (1000 * 3600);
         }
+        contextPhotos.push({
+          photo_id: photo.photo_id,
+          filename: photo.filename,
+          timestamp: photo.timestamp,
+          location_name: photo.location_name,
+          scene_description: photo.scene_description,
+          tags: photo.tags,
+          image_url: photo.image_url,
+          time_delta_hours: Math.round(timeDiffHours * 100) / 100
+        });
       }
     }
 
-    contextPhotos.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
-
-    if (contextPhotos.length === 0) {
-      return {
-        status: 'SPARSE_CONTEXT',
-        message: 'No Additional Photos Found in window.',
-        photos: []
-      };
-    }
+    contextPhotos.sort((a, b) => {
+      if (a.timestamp && b.timestamp) {
+        return new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime();
+      }
+      return 0;
+    });
 
     return {
       status: 'SUCCESS',
       anchor_id: anchorPhotoId,
-      time_window_hours: timeWindowHours,
-      max_distance_km: maxDistanceKm,
+      anchor_description: anchorPhoto.scene_description,
       photos_found_count: contextPhotos.length,
       photos: contextPhotos
     };

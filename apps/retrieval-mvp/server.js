@@ -14,27 +14,27 @@ const parser = new AIQueryParser();
 const scenarios = [
   {
     scenario_id: 'SCENARIO_1',
-    scenario_name: 'Scenario 1: Beach Trip Sunset',
+    scenario_name: 'Goa Beach Sunset',
     raw_query: 'That trip to Goa beach with friends where we watched the sunset and later went for dinner'
   },
   {
     scenario_id: 'SCENARIO_2',
-    scenario_name: 'Scenario 2: Mountain Hike Dinner',
+    scenario_name: 'Yosemite Mountain Hike',
     raw_query: 'Hiking trip in Yosemite mountains near mist trail where we ate hot soup for dinner'
   },
   {
     scenario_id: 'SCENARIO_3',
-    scenario_name: 'Scenario 3: Missing EXIF Vintage Family',
+    scenario_name: 'Vintage Family Reunion',
     raw_query: 'Scanned vintage photo of family reunion with grandparents'
   },
   {
     scenario_id: 'SCENARIO_4',
-    scenario_name: 'Scenario 4: Sparse Context Office Document',
+    scenario_name: 'Office Desk Expense Receipt',
     raw_query: 'Receipt or office document lying on the work desk'
   },
   {
     scenario_id: 'SCENARIO_5',
-    scenario_name: 'Scenario 5: Multi-Event Overlap Birthday',
+    scenario_name: 'Birthday Party Evening',
     raw_query: 'Birthday party with cake and candles evening celebration'
   }
 ];

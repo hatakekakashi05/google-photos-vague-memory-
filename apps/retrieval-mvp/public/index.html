@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Photos | Retrieval MVP</title>
+  <title>Google Photos</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -13,57 +13,31 @@
   <!-- Clean Google Photos App Header -->
   <header class="app-header">
     <div class="header-logo">
-      <svg class="pinwheel-icon" viewBox="0 0 48 48" fill="none" width="28" height="28">
+      <svg class="pinwheel-icon" viewBox="0 0 48 48" fill="none" width="32" height="32">
         <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12H24Z" fill="#EA4335"/>
         <path d="M24 12C30.6274 12 36 6.62742 36 0C36 -6.62742 30.6274 -12 24 -12V12Z" fill="#FBBC05" transform="translate(0, 24)"/>
         <path d="M24 36C24 42.6274 29.3726 48 36 48C42.6274 48 48 42.6274 48 36H24Z" fill="#34A853"/>
         <path d="M24 36C17.3726 36 12 41.3726 12 48C12 54.6274 17.3726 60 24 60V36Z" fill="#4285F4" transform="translate(0, -24)"/>
       </svg>
-      <h1>Google Photos | <span>Retrieval MVP</span></h1>
+      <h1>Google Photos</h1>
     </div>
-    <div class="header-badge">Concept A: Contextual Jump & Expand (±4.0h, ≤1.0km)</div>
   </header>
 
   <main class="main-container">
     
-    <!-- Scenarios & Search Bar -->
+    <!-- Quick Search Scenarios & Search Bar -->
     <section class="search-section">
-      <div class="preset-scenarios">
-        <label>Preset Scenarios:</label>
-        <div class="preset-buttons" id="preset-buttons">
-          <!-- Populated by app.js -->
-        </div>
-      </div>
-
       <div class="search-bar-container">
-        <input type="text" id="query-input" placeholder="Describe your vague memory (e.g., 'Goa beach trip sunset with friends')..." autocomplete="off">
-        <button id="search-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-          </svg>
-          Search Memories
-        </button>
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="#5f6368">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+        <input type="text" id="query-input" placeholder="Search your memories (e.g. 'Goa beach trip sunset with friends')..." autocomplete="off">
+        <button id="search-btn">Search</button>
       </div>
-    </section>
 
-    <!-- Signal Parsing Panel -->
-    <section class="signal-panel" id="signal-panel" style="display: none;">
-      <div class="panel-header">
-        <h3>AI Memory Signal Parser</h3>
-        <span id="confidence-badge" class="badge">Confidence: --</span>
-      </div>
-      <div class="signal-grid">
-        <div class="signal-item">
-          <span class="signal-label">Classified Intent</span>
-          <span class="signal-value" id="signal-intent">--</span>
-        </div>
-        <div class="signal-item">
-          <span class="signal-label">Anchor Keywords</span>
-          <div class="tag-container" id="signal-anchor-tags">--</div>
-        </div>
-        <div class="signal-item">
-          <span class="signal-label">Target Keywords</span>
-          <div class="tag-container" id="signal-target-tags">--</div>
+      <div class="preset-scenarios">
+        <div class="preset-buttons" id="preset-buttons">
+          <!-- Quick search pills populated by app.js -->
         </div>
       </div>
     </section>
@@ -71,8 +45,11 @@
     <!-- Photo Results Section -->
     <section class="results-section">
       <div class="results-header">
-        <h2 id="results-title">Candidate Surfacing Results</h2>
-        <span id="results-count" class="badge info">0 Photos</span>
+        <h2 id="results-title">Photos</h2>
+        <div id="results-count-container">
+          <span id="results-count" class="count-badge">0 Photos</span>
+          <button id="back-to-results-btn" class="back-btn" style="display: none;">← Back to Search</button>
+        </div>
       </div>
 
       <div class="photo-grid" id="photo-grid">
@@ -83,7 +60,7 @@
   </main>
 
   <footer class="app-footer">
-    Google Photos Retrieval MVP | Concept A Contextual Jump & Expand (±4.0h, ≤1.0km)
+    Google Photos
   </footer>
 
   <script src="app.js"></script>
