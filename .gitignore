@@ -1,6 +1,13 @@
+# Dependencies & Environment
 node_modules
 .env
 .env.local
 .DS_Store
 *.log
 .vercel
+
+# Exclude Non-Project Personal Files & Unrelated Projects
+*.pdf
+*Resume*.md
+Master_Application_CheatSheet.md
+certlab-ai/
