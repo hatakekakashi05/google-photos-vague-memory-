@@ -122,34 +122,46 @@ async function buildPowerPointDeck() {
     // SLIDE 7
     {
       slideNum: 7,
-      category: "7. SOLUTION RATIONALE & CONCEPT-A COMPARISON",
-      title: "Concept A Outperforms Alternatives with 8.93/10 Score via 1-Tap Contextual Jump",
-      subtitle: "Architectural Trade-off Evaluation Matrix & Quantitative Selection Rationale",
-      tableHeader: ["Concept Option", "User Value (/10)", "Feasibility (/10)", "Latency Impact", "Friction Level", "Total Score", "Strategic Decision"],
-      tableColW: [2.3, 1.1, 1.1, 1.2, 1.1, 0.9, 1.3],
-      tableRows: [
-        ["Concept A: 1-Tap Context Jump", "9.2 / 10", "8.8 / 10", "< 100 ms", "Zero Friction", "8.93 / 10", "SELECTED (Recommended)"],
-        ["Concept B: Conversational Ask Photos", "7.0 / 10", "5.8 / 10", "4.2 sec", "High Latency", "6.40 / 10", "REJECTED (High Cost/Latency)"],
-        ["Concept C: Manual Tagging Prompts", "4.5 / 10", "3.8 / 10", "0 ms", "Extreme Effort", "4.10 / 10", "REJECTED (Low Adoption)"]
+      category: "7. PROPOSED SOLUTION & WORKING MECHANISM",
+      title: "Gemini AI Memory Engine Solves Vague Search via 1-Tap Timeline Context Jump",
+      subtitle: "Solution Concept, Executive Working Paragraph & Operational Working Mechanism",
+      metricCallouts: [
+        { value: "Gemini AI Parser", label: "Extracts Anchors vs Targets" },
+        { value: "1-Tap Context Jump", label: "±4.0h, ≤1.0km Spatial Window" },
+        { value: "8.93 / 10 Score", label: "Concept A vs 6.40 Ask Photos" }
       ],
-      speakerNotes: "Slide 7 details our architectural evaluation matrix where Concept A scored 8.93/10 with sub-100ms latency."
+      tableHeader: ["Solution Component / Phase", "Technical Function & Mechanism", "Operational Execution & User Outcome", "Performance & Benchmark Score"],
+      tableColW: [2.2, 2.8, 2.5, 1.5],
+      tableRows: [
+        ["Solution Concept Definition", "Gemini AI Query Parser", "Converts vague natural language prompts e.g. 'Goa sunset dinner receipt' into anchor tokens & target descriptors", "Primary Core Solution"],
+        ["1-Tap Context Jump Mechanism", "Spatial-Temporal Windowing", "Tapping 'Jump to Context' on candidate anchor reads ISO timestamp & GPS coordinates (±4.0h, ≤1.0km)", "< 100 ms API Latency"],
+        ["Concept A Evaluation (SELECTED)", "Contextual Jump & Expand", "Surfaces recognizable visual anchors as visual bridge to un-tagged surrounding target media", "8.93 / 10 (SELECTED)"],
+        ["Concept B Evaluation (REJECTED)", "Conversational Ask Photos", "Multi-turn LLM chat retrieval faces 4.2s latency, high API cost, and multi-step turn friction", "6.40 / 10 (REJECTED)"],
+        ["Concept C Evaluation (REJECTED)", "Manual Tagging Prompts", "Requires manual tagging of un-indexed photos; zero latency impact but suffers <5% adoption", "4.10 / 10 (REJECTED)"]
+      ],
+      speakerNotes: "Slide 7 details our proposed solution concept, executive working mechanism (Gemini query parsing + 1-Tap Context Jump), and architectural tradeoff evaluation matrix where Concept A scored 8.93/10."
     },
     // SLIDE 8
     {
       slideNum: 8,
-      category: "8. MVP ARCHITECTURE & COMPONENT VERIFICATION",
-      title: "Interactive Gemini AI MVP Surfacing Candidate Anchors and 1-Tap Context Expansion",
-      subtitle: "3-Screen Interactive Solution Architecture Specification & Live Links",
-      tableHeader: ["UX Screen / Step", "Feature Component", "User Action & Technical Mechanism", "Input Signal Parsed", "Rendered Output & Live URL"],
-      tableColW: [1.6, 1.8, 2.2, 1.8, 1.6],
-      tableRows: [
-        ["Screen 1: Search", "Gemini AI Search Bar", "Types vague prompt e.g. 'Goa sunset dinner receipt'", "Natural language query", "Parses intent & extracts tags"],
-        ["Screen 1 Inspector", "✨ Gemini AI Signals", "Toggles AI inspector button", "Confidence & keyword arrays", "Renders AI signal breakdown"],
-        ["Screen 2: Candidates", "Candidate Anchor Grid", "Views top recognized candidate anchors", "Similarity ranking score", "Renders precision photo cards"],
-        ["Screen 3: Context Jump", "1-Tap Timeline Grid", "Clicks 'Jump to Context' button", "Anchor ISO + GPS coordinates", "Expands ±4.0h, ≤1.0km photos"],
-        ["Live App 2 MVP Link", "Deployed Vercel MVP", "Interactive End-to-End Prototype", "Live REST API Endpoints", "https://google-photos-vague-memory-discover.vercel.app/"]
+      category: "8. MVP FUNCTIONING & 3-SCREEN USER WORKFLOW",
+      title: "Interactive Gemini AI MVP Demonstrates End-to-End Search, Signals & Context Expansion",
+      subtitle: "Live Production MVP User Workflow (App 2 on Vercel), Signal Inspector & Latency Bounds",
+      metricCallouts: [
+        { value: "App 2 Deployed", label: "Live Vercel Interactive MVP" },
+        { value: "✨ Signals Inspector", label: "AI Intent & Keyword Arrays" },
+        { value: "100% Media Match", label: "Verified Visual Metadata" }
       ],
-      speakerNotes: "Slide 8 details App 2: Solution Retrieval MVP with explicit Vercel live application links and sub-100ms latency verification."
+      tableHeader: ["MVP UX Screen / Workflow Step", "Feature Component & UI State", "User Action & Technical Mechanism", "Input Signal & Processed Output", "Live Production URL"],
+      tableColW: [1.8, 1.8, 2.4, 1.6, 1.4],
+      tableRows: [
+        ["Screen 1: Search Input", "Gemini AI Search Bar", "User enters vague text prompt e.g. 'Goa sunset dinner receipt' or selects query pill", "Parses intent into visual anchor terms ('Goa beach') and target item tags", "https://google-photos-vague-memory-discover.vercel.app/"],
+        ["Screen 1: Signal Inspector", "✨ Gemini AI Signals Drawer", "Toggles Inspector drawer to audit real-time AI confidence scores & keyword arrays", "Exposes underlying Gemini 2.5 Flash query parsing pipeline & extracted tags", "https://google-photos-vague-memory-discover.vercel.app/"],
+        ["Screen 2: Candidate Surfacing", "Candidate Visual Anchor Grid", "Renders top recognized visual candidate anchor cards matching event landmarks", "Displays precision photo cards with similarity scores bridging to target media", "https://google-photos-vague-memory-discover.vercel.app/"],
+        ["Screen 3: 1-Tap Context Jump", "1-Tap Timeline Context Grid", "User taps 'Jump to Timeline Context' button on recognized anchor photo card", "Executes ±4.0h, ≤1.0km context expansion, exposing un-tagged paper receipts", "https://google-photos-vague-memory-discover.vercel.app/"],
+        ["MVP Production Performance", "Live Vercel REST API", "Sub-100ms API response latency across 120 benchmark media items", "100% verified visual tag matching (0 image-description mismatch bugs)", "LIVE (Vercel)"]
+      ],
+      speakerNotes: "Slide 8 details App 2: Solution Retrieval MVP user workflow across 3 screens with explicit Vercel live application links and sub-100ms latency verification."
     },
     // SLIDE 9
     {
