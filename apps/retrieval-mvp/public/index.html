@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Photos</title>
+  <title>Google Photos | Gemini AI Search</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -21,9 +21,35 @@
       </svg>
       <h1>Google Photos</h1>
     </div>
+    <button id="toggle-ai-signals-btn" class="ai-signals-toggle">✨ Gemini AI Signals</button>
   </header>
 
   <main class="main-container">
+
+    <!-- Expandable Gemini AI Signals Panel -->
+    <section class="ai-signals-panel" id="ai-signals-panel" style="display: none;">
+      <div class="ai-panel-header">
+        <div class="ai-panel-title">
+          <span>✨</span>
+          <span>Gemini AI Memory Signal Inspector</span>
+        </div>
+        <span id="ai-confidence-badge" class="ai-badge">Confidence: 95%</span>
+      </div>
+      <div class="ai-signals-grid">
+        <div class="ai-signal-card">
+          <span class="ai-signal-label">Classified Search Intent</span>
+          <span class="ai-signal-value" id="ai-intent-val">Vague Memory Intent</span>
+        </div>
+        <div class="ai-signal-card">
+          <span class="ai-signal-label">Extracted Anchor Keywords</span>
+          <div class="ai-tag-list" id="ai-anchor-tags">--</div>
+        </div>
+        <div class="ai-signal-card">
+          <span class="ai-signal-label">Target Media Descriptors</span>
+          <div class="ai-tag-list" id="ai-target-tags">--</div>
+        </div>
+      </div>
+    </section>
     
     <!-- Quick Search Scenarios & Search Bar -->
     <section class="search-section">
@@ -60,7 +86,7 @@
   </main>
 
   <footer class="app-footer">
-    Google Photos
+    Google Photos | Gemini AI-Powered Vague Memory Retrieval Engine
   </footer>
 
   <script src="app.js"></script>

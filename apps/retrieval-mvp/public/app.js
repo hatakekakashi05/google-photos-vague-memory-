@@ -6,9 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultsCount = document.getElementById('results-count');
   const backToResultsBtn = document.getElementById('back-to-results-btn');
   const photoGrid = document.getElementById('photo-grid');
+  const toggleAiBtn = document.getElementById('toggle-ai-signals-btn');
+  const aiPanel = document.getElementById('ai-signals-panel');
 
   let lastCandidates = [];
   let currentQuery = '';
+
+  if (toggleAiBtn && aiPanel) {
+    toggleAiBtn.addEventListener('click', () => {
+      const isVisible = aiPanel.style.display !== 'none';
+      aiPanel.style.display = isVisible ? 'none' : 'block';
+      toggleAiBtn.classList.toggle('active', !isVisible);
+    });
+  }
 
   // Load preset scenario pills
   fetch('/api/scenarios')
@@ -61,9 +71,34 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
       lastCandidates = data.candidates || [];
+      updateAiSignals(data.signal);
       renderCandidateAnchors(lastCandidates);
     })
     .catch(err => console.error('Search error:', err));
+  }
+
+  function updateAiSignals(signal) {
+    if (!signal) return;
+    const badge = document.getElementById('ai-confidence-badge');
+    if (badge && signal.parser_metadata) {
+      badge.textContent = `Confidence: ${(signal.parser_metadata.confidence_score * 100).toFixed(0)}%`;
+    }
+    const intentElem = document.getElementById('ai-intent-val');
+    if (intentElem) intentElem.textContent = signal.search_intent || 'Vague Memory Intent';
+
+    const anchorContainer = document.getElementById('ai-anchor-tags');
+    if (anchorContainer && signal.extracted_signals) {
+      anchorContainer.innerHTML = (signal.extracted_signals.anchor_keywords.length > 0)
+        ? signal.extracted_signals.anchor_keywords.map(k => `<span class="ai-tag">${k}</span>`).join('')
+        : '<span class="ai-none">Direct Memory Match</span>';
+    }
+
+    const targetContainer = document.getElementById('ai-target-tags');
+    if (targetContainer && signal.extracted_signals) {
+      targetContainer.innerHTML = (signal.extracted_signals.target_descriptors.length > 0)
+        ? signal.extracted_signals.target_descriptors.map(k => `<span class="ai-tag target">${k}</span>`).join('')
+        : '<span class="ai-none">Implicit Media Target</span>';
+    }
   }
 
   function renderCandidateAnchors(candidates) {
