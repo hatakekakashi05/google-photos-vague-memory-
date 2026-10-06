@@ -6,187 +6,204 @@ async function buildPowerPointDeck() {
   const pptx = new pptxgen();
   pptx.layout = 'LAYOUT_16x9';
   pptx.title = 'Google Photos Gemini AI Vague-Memory Search & Retrieval Engine';
-  pptx.author = 'Google Photos AI PM Team';
-  pptx.company = 'Google Photos AI Executive Presentation';
+  pptx.subject = 'Product Management Executive Case Study';
 
-  // Master Slide Styling Colors
-  const COLOR_BLUE = '1A73E8';
-  const COLOR_DARK = '202124';
-  const COLOR_GRAY = '5F6368';
-  const COLOR_LIGHT_BG = 'F8F9FA';
+  // High-contrast, color-blind accessible visual palette
+  const COLOR_PRIMARY_BLUE = '1A73E8';
+  const COLOR_TEXT_DARK = '202124';
+  const COLOR_TEXT_MUTED = '3C4043';
+  const COLOR_SLIDE_BG = 'F8F9FA';
   const COLOR_CARD_BG = 'FFFFFF';
   const COLOR_BORDER = 'DADCE0';
 
+  // 10-Slide Master Deck aligned to strict rubrics
   const slidesData = [
     {
       slideNum: 1,
-      title: "Google Photos Gemini AI Vague-Memory Search & Retrieval Engine",
-      subtitle: "Powered by Gemini AI Search & 1-Tap Timeline Context Discovery",
+      category: "1. TITLE & DEPLOYED AI-NATIVE MVP",
+      title: "Gemini AI Memory Engine Solves Vague Retrieval via 1-Tap Timeline Context Jump",
+      subtitle: "Executive Overview & Production App Deployments",
       bullets: [
-        "Core Engine: Powered directly by Gemini AI Multimodal Search & Natural Language Parsing for vague memory queries.",
-        "Target Failure Mode: Solves Critical Vague-Memory Retrieval Failures (CFM-01) where users recall event context rather than exact tags or EXIF metadata.",
-        "Approved Solution: Concept A ('Gemini AI Contextual Jump & Expand', Value Score 8.93/10).",
-        "Key Innovation: Seamless 1-tap transition from Gemini AI search candidate surfacing to full chronological timeline context grid (±4.0h, ≤1.0km).",
-        "Deployment Status: Production-Ready Vercel Applications (App 1 Discovery Engine & App 2 Retrieval MVP)."
+        "Problem Solved: Traditional keyword search fails when users recall vague event memories (e.g. 'Goa beach dinner') rather than un-tagged file metadata.",
+        "Deployed AI-Native MVP: Production prototype live on Vercel: https://google-photos-vague-memory-discover.vercel.app/",
+        "Discovery Engine Dashboard: Problem analytics dashboard live on Vercel: https://google-photos-vague-memory-discover.vercel.app/",
+        "Primary Research Form: Interactive survey tool live at: https://google-photos-vague-memory-discover.vercel.app/google_form.html",
+        "Source Codebase: Public GitHub repository hosted at: https://github.com/hatakekakashi05/google-photos-vague-memory-"
       ],
-      speakerNotes: "Welcome executive team. Today we present the Gemini AI-powered Vague-Memory Search and Retrieval Engine for Google Photos. Our primary objective is solving CFM-01—the failure of traditional text search when users try to locate un-indexed personal media like paper receipts or scanned family photos using vague event memories. Concept A introduces a 1-tap contextual jump that bridges natural language queries with full timeline context."
+      speakerNotes: "Slide 1 introduces the executive solution: Google Photos Gemini AI Vague-Memory Retrieval Engine. Live links to our deployed Vercel apps, primary research form, and GitHub repo are included."
     },
     {
       slideNum: 2,
-      title: "Strategic Context & Gemini AI Search Scope",
-      subtitle: "Google Photos Ecosystem & Strategic AI Opportunity",
+      category: "2. BUSINESS METRIC DECOMPOSITION",
+      title: "Decomposing User VMRSR into Anchor Discovery & Target Reachability Rates",
+      subtitle: "Canonical North-Star Metric Tree Architecture",
       bullets: [
-        "Ecosystem Scale: Serving over 1B+ active users managing massive multi-year personal photo archives.",
-        "User Friction: Search degradation occurs when users cannot recall exact dates, filenames, or tags for un-indexed target media (paper bills, document scans, specific dinner photos).",
-        "Gemini AI Solution: Leverages Gemini AI natural language query parsing to extract anchor entities (e.g. 'Goa beach') and match target media seamlessly.",
-        "Strategic Metric Impact: Directly maximizes the canonical User Vague-Memory Retrieval Success Rate (User VMRSR)."
+        "North-Star Metric (User VMRSR): Ratio of successful vague memory retrievals to total vague search attempts across active photo collections.",
+        "Metric Decomposition Formula: User VMRSR = Candidate Anchor Discovery Rate (ADR) × Target Context Reachability Rate (TCRR).",
+        "Stage G1 Bottleneck: 67.6% of search failure sessions terminate at initial query formulation due to semantic asymmetry.",
+        "Target Metric Lift: Gemini AI query parsing elevates ADR from 32.4% baseline to 100% benchmark discovery in candidate surfacing."
       ],
-      speakerNotes: "Looking at the strategic context, Google Photos handles billions of photo searches daily. However, un-tagged items like receipts, warranty documents, or old scanned photos create severe user friction. By integrating Gemini AI natural language parsing, we convert subjective user queries into targeted anchor signals, directly elevating the User Vague-Memory Retrieval Success Rate."
+      speakerNotes: "Slide 2 details our metric tree. We decompose User VMRSR into Candidate Anchor Discovery Rate (ADR) and Target Context Reachability Rate (TCRR)."
     },
     {
       slideNum: 3,
-      title: "Empirical Evidence & Public Review Analysis",
-      subtitle: "1,000 Public Reviews & Community Feedback Synthesis",
+      category: "3. DISCOVERY-ENGINE FINDINGS",
+      title: "1,000 Public Reviews Reveal 67.6% Query Surfacing Failure and 50% Document Need",
+      subtitle: "Multi-Platform Public Community Feedback Analytics",
       bullets: [
-        "Public Evidence Dataset: 1,000 multi-platform user reviews analyzed across Reddit, Play Store, App Store, X, and Google Support.",
-        "Gemini AI Categorization: Gemini 2.5 Flash API synthesizes feedback into 6 key friction domains (67.6% initial query surfacing failure).",
-        "High Urgency Drop-Off: 50.0% of vague search sessions involve critical document/receipt needs with a steep 1–3 minute abandonment cliff (76.5% drop-off).",
-        "Discovery Engine (UI #1): Live interactive analytics dashboard showcasing categorized public feedback and Gemini AI synthesis."
+        "Public Review Dataset: 1,000 public community reviews analyzed across Reddit, Play Store, App Store, X, and Google Support.",
+        "Gemini 2.5 Flash Synthesis: Synthesizes feedback into 6 key friction domains, revealing 676 out of 1,000 queries fail at initial surfacing.",
+        "High-Urgency Document Need: 50.0% of vague searches target critical paper bills, tax receipts, warranties, or medical prescriptions.",
+        "Live Analytics Tool: App 1 Discovery Engine (https://google-photos-vague-memory-discover.vercel.app/) provides real-time Gemini categorization."
       ],
-      speakerNotes: "Our data foundation is built on 1,000 multi-platform user reviews analyzed via Gemini 2.5 Flash API. The empirical data reveals that 67.6% of failure sessions collapse at initial query surfacing. Furthermore, 50% of searches involve high-urgency document retrieval where users abandon after 1 to 3 minutes of futile timeline scrolling."
+      speakerNotes: "Slide 3 presents empirical discovery findings from 1,000 public user reviews analyzed via Gemini 2.5 Flash API."
     },
     {
       slideNum: 4,
-      title: "Metric Decomposition & Funnel Bottleneck",
-      subtitle: "Canonical Metric Tree & Gemini AI Impact",
+      category: "4. USER RESEARCH & RETRIEVAL TASKS",
+      title: "User Research Discovers 76.5% Scroll Fatigue Cliff and 52.9% Event Anchor Recall",
+      subtitle: "Primary Survey Research & Observed Retrieval Behaviors",
       bullets: [
-        "Primary Metric (User VMRSR): Ratio of successful vague memory retrievals to total vague search attempts.",
-        "Initial Surfacing Bottleneck: 67.6% of search failures occur at Stage G1 query formulation due to semantic asymmetry between vague memory tokens and photo tags.",
-        "Metric Tree Layering: User VMRSR = Candidate Anchor Discovery Rate (ADR) × Target Context Reachability Rate (TCRR).",
-        "Gemini AI Acceleration: Elevates both ADR and TCRR through intelligent anchor entity extraction and timeline window expansion."
+        "Primary Research Cohort: N=34 active mobile photo archivers evaluated across 15-question research survey.",
+        "Observed Scroll Fatigue Cliff: 76.5% of users experience extreme scroll fatigue and abandon search after 1 to 3 minutes of timeline scrolling.",
+        "Anchor Detail Recall: 52.9% of users recall surrounding event landmarks (hotels, beaches, vistas) as primary memory anchors when target terms fail.",
+        "Interactive Form Asset: Complete survey accessible at https://google-photos-vague-memory-discover.vercel.app/google_form.html"
       ],
-      speakerNotes: "We decomposed our north-star metric—User VMRSR—into two sub-metrics: Candidate Anchor Discovery Rate (ADR) and Target Context Reachability Rate (TCRR). By solving the Stage G1 surfacing bottleneck through Gemini AI query parsing, we dramatically expand the top of the retrieval funnel."
+      speakerNotes: "Slide 4 summarizes primary user research across N=34 responses, highlighting the steep scroll fatigue cliff."
     },
     {
       slideNum: 5,
-      title: "Problem Definition — Vague Memory Retrieval Failure",
-      subtitle: "Failure Taxonomy & Ground-Truth Isolation",
+      category: "5. CHOSEN TARGET SEGMENT",
+      title: "Targeting Active Multi-Year Mobile Archivers Searching High-Urgency Media",
+      subtitle: "User Persona Segmentation & High-Value Friction Focus",
       bullets: [
-        "Core Problem (CFM-01): Traditional text search fails to bridge vague natural-language phrases (e.g. 'Goa beach trip sunset dinner') with un-tagged candidate media.",
-        "Gemini AI Query Parsing: Automatically extracts anchor keywords (e.g. 'Goa beach', 'sunset') and target descriptors (e.g. 'dinner receipt', 'hot soup').",
-        "Ground-Truth Isolation: Evaluation ground-truth labels are strictly isolated in post-hoc benchmark evaluation scripts and never fed into retrieval ranking or context expansion logic."
+        "Target Persona: 'High-Volume Personal Media Archivers' managing 5,000+ personal photos and document scans across 3+ years.",
+        "Core Task Frequency: 4 to 8 vague memory search attempts per month for expenses, paper receipts, tax records, or past vacation moments.",
+        "User Pain Intensity: Severe anxiety during time-sensitive document retrieval (warranties, expense filing, medical forms).",
+        "Strategic Segment Fit: Maximizes user retention and daily engagement by solving high-friction retrieval dead-ends."
       ],
-      speakerNotes: "CFM-01 addresses the fundamental mismatch between subjective human memory and keyword-indexed databases. Gemini AI parses vague user prompts into distinct anchor keywords and target descriptors. To maintain rigorous engineering standards, ground-truth labels are strictly isolated from ranking logic during evaluation."
+      speakerNotes: "Slide 5 defines our target user persona—active mobile archivers facing acute friction when retrieving un-tagged documents and event media."
     },
     {
       slideNum: 6,
-      title: "Solution Architecture & Gemini AI Search Engine",
-      subtitle: "Concept A: Gemini AI Contextual Jump & Expand (Score 8.93/10)",
+      category: "6. ROOT CAUSE & PROBLEM DEFINITION",
+      title: "Semantic & Metadata Asymmetry Between Vague Queries and Un-Tagged Media",
+      subtitle: "CFM-01 Failure Taxonomy & Ground-Truth Isolation",
       bullets: [
-        "Concept A (Selected): Gemini AI Search + 1-Tap Timeline Context Expansion. Highest feasibility and user satisfaction score (8.93/10).",
-        "Engine Architecture: Gemini AI intent parser -> Semantic candidate anchor retrieval -> 1-Tap timeline context expander (±4.0h, ≤1.0km).",
-        "Rejected Alternatives: Multi-hop RAG (Score 6.40/10; rejected for high latency and complex multi-modal dependencies) and Manual Tagging (Score 4.10/10; high friction)."
+        "Root Cause (CFM-01): Semantic asymmetry between subjective natural-language queries ('Goa beach dinner receipt') and un-tagged photo metadata.",
+        "Metadata Stripping Impact: Third-party messaging (WhatsApp, Telegram) strips EXIF GPS & timestamp metadata, creating retrieval blind-spots.",
+        "Gemini AI Parsing Solution: Converts vague queries into extracted anchor keywords ('Goa beach') and target descriptors ('dinner receipt').",
+        "Ground-Truth Governance: Evaluation ground-truth labels are strictly isolated in benchmark scripts and never fed to ranking logic."
       ],
-      speakerNotes: "In our concept evaluation, Concept A scored 8.93 out of 10. Rather than forcing users to manually tag photos or relying on expensive multi-hop RAG architectures, Concept A uses Gemini AI to land on a recognizable anchor photo, and then provides a 1-tap jump into the surrounding timeline context."
+      speakerNotes: "Slide 6 breaks down the root cause (CFM-01): semantic asymmetry and EXIF metadata loss, solved via Gemini AI signal parsing."
     },
     {
       slideNum: 7,
-      title: "App 1 — Gemini AI Discovery Engine Dashboard",
-      subtitle: "Interactive Problem Analytics & Public Feedback Synthesizer",
+      category: "7. SOLUTION RATIONALE & CONCEPT A",
+      title: "Concept A Outperforms Alternatives with 8.93/10 Score via 1-Tap Contextual Jump",
+      subtitle: "Architectural Trade-off Matrix & Concept Selection",
       bullets: [
-        "Dashboard Identity: Live Vercel App 1 (google-photos-vague-memory-discover.vercel.app).",
-        "Gemini 2.5 Flash Integration: Real-time Gemini API endpoints (/api/gemini-analyze) categorize public user community feedback.",
-        "Key Metrics Displayed: Vague Search Failure Rate (67.6%), High Search Urgency (50.0%), Scroll Fatigue Thresholds, and Categorized Review Tables."
+        "Concept A (Selected - Score 8.93/10): Gemini AI Search + 1-Tap Timeline Context Expansion (±4.0h, ≤1.0km). Lowest friction, highest recall.",
+        "Concept B (Rejected - Score 6.40/10): Semantic Multi-Hop RAG rejected due to high computational latency and complex multimodal failure modes.",
+        "Concept C (Rejected - Score 4.10/10): Manual Metadata Tagging rejected due to unacceptable user friction and near-zero user adoption.",
+        "Core Architectural Advantage: Bridges vague text search to land on recognizable anchor photos, expanding surrounding media instantly."
       ],
-      speakerNotes: "App 1 is our live Discovery Engine Dashboard deployed on Vercel. It features live Gemini 2.5 Flash API endpoints that analyze public community reviews in real time, displaying breakdown charts for search urgency, failure modes, and scroll fatigue cliffs."
+      speakerNotes: "Slide 7 details our architectural evaluation matrix where Concept A scored 8.93 out of 10."
     },
     {
       slideNum: 8,
-      title: "App 2 — Gemini AI Vague-Memory Retrieval MVP",
-      subtitle: "Interactive Gemini AI Search & Contextual Jump Solution Prototype",
+      category: "8. MVP IMPLEMENTATION & USER TESTING",
+      title: "Interactive Gemini AI MVP Surfacing Candidate Anchors and 1-Tap Context Expansion",
+      subtitle: "3-Screen Interactive Solution Prototype Experience",
       bullets: [
-        "MVP Identity: Live Vercel App 2 (Solution Retrieval Prototype).",
-        "Gemini AI Search Experience: Natural language memory search bar with quick-search pills for common vague scenarios.",
-        "Precision Media Matching: 100% verified real-world imagery matching exact scene descriptions, tags, and timestamps (e.g., grandparents in backyard garden).",
-        "1-Tap Contextual Jump: Expands candidate photo into a full surrounding timeline context grid with clean return navigation."
+        "Interactive MVP Application: Deployed live on Vercel: https://google-photos-vague-memory-discover.vercel.app/",
+        "Screen 1 (Search & Signals): Gemini AI search bar with quick pills + optional '✨ Gemini AI Signals Inspector' toggle for signal transparency.",
+        "Screen 2 (Candidate Surfacing): Renders 100% verified real-world imagery matching exact scene descriptions (e.g. grandparents in backyard garden).",
+        "Screen 3 (1-Tap Context Expansion): Expands candidate photo into surrounding timeline context grid with clean '← Back to Search' navigation."
       ],
-      speakerNotes: "App 2 represents the user-facing solution prototype. Built with a clean Google Photos design system, it features Gemini AI memory search, quick-search scenario pills, precision real-world imagery, and seamless 1-tap contextual timeline expansion."
+      speakerNotes: "Slide 8 showcases App 2: Solution Retrieval MVP with Gemini AI memory search, precision imagery, and 1-tap timeline expansion."
     },
     {
       slideNum: 9,
-      title: "Benchmark Verification & Accuracy Audit",
-      subtitle: "Ground-Truth Evaluation & 100% Image Match Precision",
+      category: "9. SUCCESS METRICS & BENCHMARK RESULTS",
+      title: "Synthetic Benchmark Achieves 100% Anchor Discovery & 100% Context Reachability",
+      subtitle: "Ground-Truth Evaluation Benchmark & API Integration Audit",
       bullets: [
-        "Candidate Anchor Discovery Rate (ADR): 100.0% across benchmark evaluation scenarios.",
+        "Candidate Anchor Discovery Rate (ADR): 100.0% pass rate across benchmark evaluation scenarios.",
         "Target Context Reachability Rate (TCRR): 100.0% successful context expansion for all candidate anchors.",
-        "Media Precision Audit: Verified zero image-tag mismatches across all 26 dataset photo entries.",
+        "Media Precision Audit: Verified 100% visual precision matching between scene descriptions and Unsplash media URLs across 26 photo entries.",
         "API Health Pass Rate: 100.0% REST API integration pass rate across search and expansion endpoints."
       ],
-      speakerNotes: "Our quantitative benchmark audit confirms 100% Candidate Anchor Discovery Rate and 100% Target Context Reachability Rate across all evaluation scenarios. We also completed a full visual audit verifying 100% precision between image tags and visual media content."
+      speakerNotes: "Slide 9 presents our benchmark audit results: 100% ADR and 100% TCRR pass rates across evaluation scenarios."
     },
     {
       slideNum: 10,
-      title: "Deployment Roadmap & Executive Deliverables",
-      subtitle: "Vercel Cloud Hosting, GitHub Repository & Production Package",
+      category: "10. RISKS, LIMITATIONS & EXPERIMENTATION ROADMAP",
+      title: "Phased 1% to 100% Rollout Guarded by Spatial-Temporal Filters and Kill-Switches",
+      subtitle: "Production Risk Mitigation, Governance & Rollout Ramp",
       bullets: [
-        "GitHub Repository: Fully updated at https://github.com/hatakekakashi05/google-photos-vague-memory-.",
-        "Vercel Cloud Deployment: Two independent production apps (App 1 Discovery Engine & App 2 Retrieval MVP).",
-        "A/B Testing Ramp: 1% → 5% → 25% → 100% rollout schedule with remote kill-switch feature flags.",
-        "Executive Package Complete: Codebase, datasets, documentation, and PowerPoint deck fully aligned."
+        "Spatial-Temporal Boundaries: Windowing boundaries (±4.0h, ≤1.0km) prevent multi-event overlap and context pollution.",
+        "Zero-State Fallback Affordances: Gracefully handles missing EXIF timestamps ('View Date in Timeline') and sparse receipt archives.",
+        "Phased A/B Testing Ramp: Controlled rollout schedule (1% → 5% → 25% → 100%) with remote kill-switch feature flags.",
+        "Complete Project Codebase: Hosted publicly on GitHub: https://github.com/hatakekakashi05/google-photos-vague-memory-"
       ],
-      speakerNotes: "In conclusion, all production code, datasets, Vercel deployments, and executive documentation are 100% synchronized and live. We are ready to begin phased A/B testing rollout starting at 1% of active user traffic."
+      speakerNotes: "Slide 10 details production risk mitigations, fallback affordances, and our phased A/B experimentation roadmap."
     }
   ];
 
   for (const data of slidesData) {
     const slide = pptx.addSlide();
-    slide.background = { color: COLOR_LIGHT_BG };
+    slide.background = { color: COLOR_SLIDE_BG };
 
     // Set Speaker Notes
     slide.notes = data.speakerNotes;
 
-    // Top Header Banner
+    // Top Header Banner Box
     slide.addShape(pptx.shapes.RECTANGLE, {
-      x: 0, y: 0, w: 10, h: 1.1,
+      x: 0, y: 0, w: 10, h: 1.15,
       fill: { color: COLOR_CARD_BG },
       line: { color: COLOR_BORDER, width: 1 }
     });
 
-    slide.addText(`SLIDE ${data.slideNum} OF 10 | GOOGLE PHOTOS GEMINI AI SEARCH`, {
-      x: 0.5, y: 0.15, w: 9.0, h: 0.25,
-      fontSize: 10, bold: true, color: COLOR_BLUE
+    // Category / Slide Number Badge (Strictly Font Size >= 14pt)
+    slide.addText(data.category, {
+      x: 0.5, y: 0.12, w: 9.0, h: 0.28,
+      fontSize: 14, bold: true, color: COLOR_PRIMARY_BLUE
     });
 
+    // Slide Title — Key Message (Strictly Font Size >= 14pt; 20pt)
     slide.addText(data.title, {
-      x: 0.5, y: 0.4, w: 9.0, h: 0.55,
-      fontSize: 20, bold: true, color: COLOR_DARK
+      x: 0.5, y: 0.42, w: 9.0, h: 0.65,
+      fontSize: 20, bold: true, color: COLOR_TEXT_DARK
     });
 
-    // Content Card Box
+    // Content Card Box Container
     slide.addShape(pptx.shapes.RECTANGLE, {
-      x: 0.5, y: 1.3, w: 9.0, h: 4.0,
+      x: 0.5, y: 1.35, w: 9.0, h: 3.95,
       fill: { color: COLOR_CARD_BG },
       line: { color: COLOR_BORDER, width: 1 }
     });
 
+    // Subtitle inside Card Box (Strictly Font Size >= 14pt; 16pt)
     slide.addText(data.subtitle, {
-      x: 0.8, y: 1.5, w: 8.4, h: 0.4,
-      fontSize: 14, bold: true, color: COLOR_BLUE
+      x: 0.8, y: 1.55, w: 8.4, h: 0.4,
+      fontSize: 16, bold: true, color: COLOR_PRIMARY_BLUE
     });
 
+    // Bullet Items (Strictly Font Size >= 14pt)
     const formattedBullets = data.bullets.map(b => ({
       text: b,
-      options: { fontSize: 13, color: COLOR_DARK, bullet: true, spaceAfter: 12 }
+      options: { fontSize: 14, color: COLOR_TEXT_DARK, bullet: true, spaceAfter: 12 }
     }));
 
     slide.addText(formattedBullets, {
-      x: 0.8, y: 2.0, w: 8.4, h: 3.1
+      x: 0.8, y: 2.05, w: 8.4, h: 3.05
     });
 
-    // Footer
-    slide.addText("Google Photos Gemini AI Vague-Memory Search & Retrieval Engine | Executive Presentation", {
-      x: 0.5, y: 5.35, w: 9.0, h: 0.25,
-      fontSize: 9, color: COLOR_GRAY, align: 'center'
+    // Slide Footer (Strictly Font Size >= 14pt)
+    slide.addText("Google Photos Gemini AI Vague-Memory Search & Retrieval Engine | Executive Case Study", {
+      x: 0.5, y: 5.4, w: 9.0, h: 0.25,
+      fontSize: 14, color: COLOR_TEXT_MUTED, align: 'center'
     });
   }
 
@@ -195,13 +212,19 @@ async function buildPowerPointDeck() {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  const outputPath = path.join(outputDir, 'google_photos_vague_memory_presentation.pptx');
-  await pptx.writeFile({ fileName: outputPath });
+  const outputPathNL = path.join(outputDir, 'NL_GooglePhotos.pptx');
+  const outputPathStandard = path.join(outputDir, 'google_photos_vague_memory_presentation.pptx');
+
+  await pptx.writeFile({ fileName: outputPathNL });
+  fs.copyFileSync(outputPathNL, outputPathStandard);
 
   console.log("================================================================================");
-  console.log(`POWERPOINT PRESENTATION GENERATED SUCCESSFULLY WITH SPEAKER NOTES:`);
-  console.log(`File Path: ${outputPath}`);
-  console.log(`Total Slides: 10 Slides (16:9 Widescreen Executive Package)`);
+  console.log(`STRICT GUIDELINE COMPLIANT POWERPOINT GENERATED:`);
+  console.log(`File Path (NL_GooglePhotos.pptx): ${outputPathNL}`);
+  console.log(`File Path (google_photos_vague_memory_presentation.pptx): ${outputPathStandard}`);
+  console.log(`Total Slides: Exactly 10 Slides (16:9 Widescreen)`);
+  console.log(`Fellow Name Removed: YES (100% Compliant)`);
+  console.log(`Minimum Font Size: 14pt Everywhere (100% Compliant)`);
   console.log("================================================================================");
 }
 
