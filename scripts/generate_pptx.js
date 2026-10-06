@@ -196,27 +196,57 @@ async function buildPowerPointDeck() {
 
     // Top Header Banner Box
     slide.addShape(pptx.shapes.RECTANGLE, {
-      x: 0, y: 0, w: 10, h: 1.15,
+      x: 0, y: 0, w: 10, h: 1.05,
       fill: { color: COLOR_CARD_BG },
       line: { color: COLOR_BORDER, width: 1 }
     });
 
     // Category / Slide Number Badge (Font Size >= 14pt; 14pt)
     slide.addText(data.category, {
-      x: 0.5, y: 0.12, w: 9.0, h: 0.28,
+      x: 0.5, y: 0.10, w: 9.0, h: 0.25,
       fontSize: 14, bold: true, color: COLOR_PRIMARY_BLUE
     });
 
-    // Slide Title — Key Message (Font Size >= 14pt; 20pt)
+    // Slide Title — Key Message (Font Size >= 14pt; 19pt)
     slide.addText(data.title, {
-      x: 0.5, y: 0.42, w: 9.0, h: 0.65,
-      fontSize: 20, bold: true, color: COLOR_TEXT_DARK
+      x: 0.5, y: 0.36, w: 9.0, h: 0.60,
+      fontSize: 19, bold: true, color: COLOR_TEXT_DARK
     });
 
-    // Subtitle Line above Table (Font Size >= 14pt; 15pt)
+    // 3 Executive Metric Callout Cards above Table
+    if (data.metricCallouts && data.metricCallouts.length === 3) {
+      const cardWidth = 2.85;
+      const cardGap = 0.225;
+      const startX = 0.5;
+      const cardY = 1.12;
+
+      data.metricCallouts.forEach((callout, idx) => {
+        const boxX = startX + idx * (cardWidth + cardGap);
+        // Metric Card Container Box
+        slide.addShape(pptx.shapes.RECTANGLE, {
+          x: boxX, y: cardY, w: cardWidth, h: 0.62,
+          fill: { color: COLOR_HEADER_BG },
+          line: { color: COLOR_PRIMARY_BLUE, width: 1 }
+        });
+
+        // Callout Metric Value (Bold Blue 15pt)
+        slide.addText(callout.value, {
+          x: boxX + 0.1, y: cardY + 0.05, w: cardWidth - 0.2, h: 0.28,
+          fontSize: 15, bold: true, color: COLOR_PRIMARY_BLUE, align: 'center'
+        });
+
+        // Callout Metric Label (Muted Dark 14pt)
+        slide.addText(callout.label, {
+          x: boxX + 0.1, y: cardY + 0.32, w: cardWidth - 0.2, h: 0.25,
+          fontSize: 14, color: COLOR_TEXT_MUTED, align: 'center'
+        });
+      });
+    }
+
+    // Subtitle Line above Table (Font Size >= 14pt; 14pt)
     slide.addText(data.subtitle, {
-      x: 0.5, y: 1.25, w: 9.0, h: 0.35,
-      fontSize: 15, bold: true, color: COLOR_PRIMARY_BLUE
+      x: 0.5, y: 1.80, w: 9.0, h: 0.30,
+      fontSize: 14, bold: true, color: COLOR_PRIMARY_BLUE
     });
 
     // Structure Table Rows (Header Row + Body Rows)
@@ -254,7 +284,7 @@ async function buildPowerPointDeck() {
     // Add Executive Data Table to Slide
     slide.addTable(tableRowsData, {
       x: 0.5,
-      y: 1.65,
+      y: 2.12,
       w: 9.0,
       colW: data.tableColW,
       border: { pt: 1, color: COLOR_BORDER },
@@ -263,7 +293,7 @@ async function buildPowerPointDeck() {
 
     // Slide Footer (Font Size >= 14pt)
     slide.addText("Google Photos Gemini AI Vague-Memory Search & Retrieval Engine | Executive Case Study", {
-      x: 0.5, y: 5.4, w: 9.0, h: 0.25,
+      x: 0.5, y: 5.38, w: 9.0, h: 0.22,
       fontSize: 14, color: COLOR_TEXT_MUTED, align: 'center'
     });
   }
